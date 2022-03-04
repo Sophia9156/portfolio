@@ -1,0 +1,37 @@
+@import './common';
+
+
+main{
+  position: relative;
+  .bgWrap{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    left: 0; top: 0;
+    z-index: -1;
+    .bg{
+      width: 500vw;
+      height: 500vw;
+      position: absolute;
+      left: calc(50% - 250vw); top: calc(50% - 250vw);
+      background: rgb(58,75,180);
+      background: linear-gradient(-45deg, rgba(58,75,180,0.5) 40%, rgba(253,29,29,0.5) 50%, rgba(252,176,69,0.5) 60%);
+      animation: wave2 9s infinite linear;
+    }
+  }
+}
+
+@keyframes wave2 {
+  0%{transform: translate(0, 0) rotate(0);}
+  10%{transform: scale(100%) translate(-10vw, -10vw) rotate(10deg);}
+  20%{transform: scale(80%) translate(-30vw, -30vw) rotate(30deg);}
+  30%{transform: scale(100%) translate(0, 0) rotate(10deg);}
+  40%{transform: scale(80%) translate(10vw, 10vw) rotate(-10deg);}
+  50%{transform: scale(50%) translate(25vw, 25vw) rotate(-30deg);}
+  60%{transform: scale(100%) translate(0vw, 0vw) rotate(-60deg);}
+  70%{transform: scale(80%) translate(-10vw, -10vw) rotate(-50deg);}
+  80%{transform: scale(50%) translate(0, 0) rotate(-30deg);}
+  85%{transform: scale(100%) translate(0, 0) rotate(20deg);}
+  100%{transform: translate(0, 0) rotate(0);}
+}

@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+body {
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure {
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+image {
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.material-icons-outlined {
+  font-family: 'Material Icons';
+}
+
+.header {
+  width: 100%;
+  padding: 2em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.header h1 {
+  font-size: 5em;
+  text-align: center;
+  -webkit-animation: parrot 7s infinite ease-in-out;
+          animation: parrot 7s infinite ease-in-out;
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+  cursor: pointer;
+}
+
+.header .burger {
+  width: 3em;
+  position: absolute;
+  right: 5%;
+  top: 4em;
+  cursor: pointer;
+}
+
+.header .burger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  margin: 0.6em 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.header .burger:hover span:nth-of-type(1) {
+  background-color: #fcb045;
+}
+
+.header .burger:hover span:nth-of-type(2) {
+  background-color: #fd1d1d;
+}
+
+.header .burger:hover span:nth-of-type(3) {
+  background-color: #3a4bb4;
+}
+
+@-webkit-keyframes parrot {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  5% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  10% {
+    -webkit-transform: translate(0.1em, -0.2em) rotate(20deg);
+            transform: translate(0.1em, -0.2em) rotate(20deg);
+  }
+  15% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  45% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, -0.1em) rotate(360deg);
+            transform: translate(0, -0.1em) rotate(360deg);
+  }
+  55% {
+    -webkit-transform: translate(0, 0) rotate(360deg);
+            transform: translate(0, 0) rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(360deg);
+            transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes parrot {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  5% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  10% {
+    -webkit-transform: translate(0.1em, -0.2em) rotate(20deg);
+            transform: translate(0.1em, -0.2em) rotate(20deg);
+  }
+  15% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  45% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, -0.1em) rotate(360deg);
+            transform: translate(0, -0.1em) rotate(360deg);
+  }
+  55% {
+    -webkit-transform: translate(0, 0) rotate(360deg);
+            transform: translate(0, 0) rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(360deg);
+            transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+.mainMenu {
+  width: 10em;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.subMenu {
+  width: 5em;
+  position: absolute;
+  left: calc(50% - 2.5em);
+  top: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.subMenu a {
+  display: block;
+  padding: 0.5em 1em;
+  background-color: #fff;
+  border-radius: 3em;
+  color: rgba(253, 29, 29, 0.5);
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0 10px;
+}
+
+.subMenu.active {
+  opacity: 1;
+  -webkit-transform: translateY(7em);
+          transform: translateY(7em);
+}
+
+.footer {
+  width: 100%;
+  padding: 3em 0;
+}
+
+.footer p {
+  text-align: center;
+  color: #fff;
+  font-family: "Nanum Gothic", sans-serif;
+}
+/*# sourceMappingURL=header-footer.css.map */
