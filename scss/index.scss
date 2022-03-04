@@ -9,7 +9,7 @@ main{
     overflow: hidden;
     position: fixed;
     left: 0; top: 0;
-    z-index: -1;
+    z-index: -2;
     .bg{
       width: 500vw;
       height: 500vw;
@@ -19,6 +19,10 @@ main{
       background: linear-gradient(-45deg, rgba(58,75,180,0.5) 40%, rgba(253,29,29,0.5) 50%, rgba(252,176,69,0.5) 60%);
       animation: wave2 9s infinite linear;
     }
+  }
+
+  .blockWrap{
+
   }
 }
 

@@ -353,6 +353,29 @@ table {
   }
 }
 
+.cursor {
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 100%;
+  background-color: #c300ff;
+  -webkit-transition: .2s;
+  transition: .2s;
+  z-index: -1;
+}
+
+.cursor.active {
+  -webkit-transform: scale(1000%);
+          transform: scale(1000%);
+  opacity: 0.2;
+}
+
+.cursor.fadeout {
+  opacity: 0;
+}
+
 .footer {
   width: 100%;
   padding: 3em 0;
