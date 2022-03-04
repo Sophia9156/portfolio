@@ -13,13 +13,15 @@
     font-size: 5em;
     text-align: center;
     animation: parrot 7s infinite ease-in-out;
-    animation-delay: 9s;
     cursor: pointer;
+    &:hover{
+      animation-play-state: paused;
+    }
   }
   .burger{
     width: 3em;
     position: absolute;
-    right: 5%; top: 4em;
+    right: 5%; top: 3em;
     cursor: pointer;
     span{
       display: block;
@@ -33,6 +35,19 @@
       span:nth-of-type(1){background-color: rgba(252,176,69,1);}
       span:nth-of-type(2){background-color: rgba(253,29,29,1);}
       span:nth-of-type(3){background-color: rgba(58,75,180,1);}
+    }
+  }
+  .burger.active{
+    span:nth-of-type(1){
+      background-color: rgba(253,29,29,1);
+      transform: translateY(0.8em) rotate(45deg);
+    }
+    span:nth-of-type(2){
+      opacity: 0;
+    }
+    span:nth-of-type(3){
+      background-color: rgba(58,75,180,1);
+      transform: translateY(-0.8em) rotate(-45deg);
     }
   }
 }
@@ -49,10 +64,54 @@
 }
 
 .mainMenu{
-  width: 10em;
+  width: 100vw;
   height: 100vh;
   position: absolute;
   right: 0; top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translate(100%, -200%) rotate(90deg);
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: $menu;
+  .mainMenuTop{
+    padding: 5vh 0 10vh;
+    a{
+      display: block;
+      padding: 10px;
+      margin: 10px 0;
+      color: rgba(58,75,180,0.5);
+      font-size: 5em;
+      font-weight: 700;
+      transition: .4s;
+      border: 2px solid rgba(58,75,180,0);
+      &:hover{
+        color: rgba(58,75,180,1);
+        border: 2px solid rgba(58,75,180,0.5);
+      }
+    }
+  }
+  .mainMenuBottom{
+    a{
+      display: inline-block;
+      padding: 10px;
+      color: rgba(253,29,29,0.5);
+      font-size: 2em;
+      font-weight: 700;
+      transition: .4s;
+      border: 2px solid rgba(253,29,29,0);
+      &:hover{
+        color: rgba(253,29,29,1);
+        border: 2px solid rgba(253,29,29,0.5);
+      }
+    }
+  }
+}
+.mainMenu.active{
+  transform: translate(0);
 }
 
 .subMenu{
@@ -68,16 +127,37 @@
     display: block;
     padding: 0.5em 1em;
     background-color: #fff;
+    border: 2px solid #fff;
     border-radius: 3em;
     color: rgba(253,29,29,0.5);
     font-size: 1.2em;
     font-weight: 700;
-    margin: 0 10px;
+    margin: 0 20px;
+    transition: .4s;
   }
 }
 .subMenu.active{
   opacity: 1;
   transform: translateY(7em);
+  a{
+    animation: menuPop 1s forwards linear;
+    
+    &:nth-of-type(1) {animation-delay: 0.5s;}
+    &:nth-of-type(2) {animation-delay: 0.6s;}
+    &:hover{
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+  }
+}
+
+@keyframes menuPop {
+  0%{transform: rotate(0);}
+  10%{transform: rotate(-20deg);}
+  20%{transform: translateY(-2em) rotate(-20deg);}
+  50%{transform: translateY(0) rotate(0);}
+  100%{}
 }
 
 .footer{

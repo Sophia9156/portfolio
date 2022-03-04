@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barriecito&family=Nanum+Gothic:wght@400;700;800&display=swap");
 body {
   margin: 0 auto;
 }
@@ -57,16 +57,19 @@ table {
   text-align: center;
   -webkit-animation: parrot 7s infinite ease-in-out;
           animation: parrot 7s infinite ease-in-out;
-  -webkit-animation-delay: 9s;
-          animation-delay: 9s;
   cursor: pointer;
+}
+
+.header h1:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .header .burger {
   width: 3em;
   position: absolute;
   right: 5%;
-  top: 4em;
+  top: 3em;
   cursor: pointer;
 }
 
@@ -90,6 +93,22 @@ table {
 
 .header .burger:hover span:nth-of-type(3) {
   background-color: #3a4bb4;
+}
+
+.header .burger.active span:nth-of-type(1) {
+  background-color: #fd1d1d;
+  -webkit-transform: translateY(0.8em) rotate(45deg);
+          transform: translateY(0.8em) rotate(45deg);
+}
+
+.header .burger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.header .burger.active span:nth-of-type(3) {
+  background-color: #3a4bb4;
+  -webkit-transform: translateY(-0.8em) rotate(-45deg);
+          transform: translateY(-0.8em) rotate(-45deg);
 }
 
 @-webkit-keyframes parrot {
@@ -163,11 +182,73 @@ table {
 }
 
 .mainMenu {
-  width: 10em;
+  width: 100vw;
   height: 100vh;
   position: absolute;
   right: 0;
   top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-transform: translate(100%, -200%) rotate(90deg);
+          transform: translate(100%, -200%) rotate(90deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: "Barriecito", cursive;
+}
+
+.mainMenu .mainMenuTop {
+  padding: 5vh 0 10vh;
+}
+
+.mainMenu .mainMenuTop a {
+  display: block;
+  padding: 10px;
+  margin: 10px 0;
+  color: rgba(58, 75, 180, 0.5);
+  font-size: 5em;
+  font-weight: 700;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border: 2px solid rgba(58, 75, 180, 0);
+}
+
+.mainMenu .mainMenuTop a:hover {
+  color: #3a4bb4;
+  border: 2px solid rgba(58, 75, 180, 0.5);
+}
+
+.mainMenu .mainMenuBottom a {
+  display: inline-block;
+  padding: 10px;
+  color: rgba(253, 29, 29, 0.5);
+  font-size: 2em;
+  font-weight: 700;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border: 2px solid rgba(253, 29, 29, 0);
+}
+
+.mainMenu .mainMenuBottom a:hover {
+  color: #fd1d1d;
+  border: 2px solid rgba(253, 29, 29, 0.5);
+}
+
+.mainMenu.active {
+  -webkit-transform: translate(0);
+          transform: translate(0);
 }
 
 .subMenu {
@@ -193,17 +274,83 @@ table {
   display: block;
   padding: 0.5em 1em;
   background-color: #fff;
+  border: 2px solid #fff;
   border-radius: 3em;
   color: rgba(253, 29, 29, 0.5);
   font-size: 1.2em;
   font-weight: 700;
-  margin: 0 10px;
+  margin: 0 20px;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .subMenu.active {
   opacity: 1;
   -webkit-transform: translateY(7em);
           transform: translateY(7em);
+}
+
+.subMenu.active a {
+  -webkit-animation: menuPop 1s forwards linear;
+          animation: menuPop 1s forwards linear;
+}
+
+.subMenu.active a:nth-of-type(1) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.subMenu.active a:nth-of-type(2) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.subMenu.active a:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+@-webkit-keyframes menuPop {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  10% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  20% {
+    -webkit-transform: translateY(-2em) rotate(-20deg);
+            transform: translateY(-2em) rotate(-20deg);
+  }
+  50% {
+    -webkit-transform: translateY(0) rotate(0);
+            transform: translateY(0) rotate(0);
+  }
+  100% {
+  }
+}
+
+@keyframes menuPop {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  10% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  20% {
+    -webkit-transform: translateY(-2em) rotate(-20deg);
+            transform: translateY(-2em) rotate(-20deg);
+  }
+  50% {
+    -webkit-transform: translateY(0) rotate(0);
+            transform: translateY(0) rotate(0);
+  }
+  100% {
+  }
 }
 
 .footer {
