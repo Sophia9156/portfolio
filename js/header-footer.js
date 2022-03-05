@@ -12,6 +12,33 @@ function headerFun() {
   });
 
 
+  // 링크 이동
+  $('.homeBtn').on('click', function() {
+    $('.loading').css({
+      display: 'block'
+    });
+    setTimeout(() => {
+      location.href = './index.html'
+    },1500)
+  })
+  $('.aboutBtn').on('click', function() {
+    $('.loading').css({
+      display: 'block'
+    });
+    setTimeout(() => {
+      location.href = './about.html'
+    },1500)
+  })
+  $('.worksBtn').on('click', function() {
+    $('.loading').css({
+      display: 'block'
+    });
+    setTimeout(() => {
+      location.href = './works.html'
+    },1500)
+  })
+
+
   // 커서 따라다니는 동작
   window.addEventListener('mousemove', function(e) {
     $('.cursor').css({
