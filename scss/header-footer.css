@@ -187,7 +187,7 @@ table {
   position: absolute;
   right: 0;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   -webkit-transform: translate(100%, -200%) rotate(90deg);
           transform: translate(100%, -200%) rotate(90deg);
   -webkit-transition: 1s;
@@ -357,8 +357,6 @@ table {
   width: 1.5em;
   height: 1.5em;
   position: absolute;
-  left: 0;
-  top: 0;
   border-radius: 100%;
   background-color: #c300ff;
   -webkit-transition: .2s;

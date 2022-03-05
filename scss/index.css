@@ -153,4 +153,121 @@ main .bgWrap .bg {
             transform: translate(0, 0) rotate(0);
   }
 }
+
+.textWrap {
+  width: 100%;
+  height: 85vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.textWrap h2 {
+  padding: 0 0.5em;
+  color: #fff;
+  font-size: 8em;
+  margin-top: 1em;
+  font-weight: 700;
+  position: relative;
+  cursor: default;
+}
+
+.textWrap h2 .textBg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  border-radius: 0.5em;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.textWrap h2 .textBg .textBox {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.textWrap h2 .textBg .textBox1 {
+  width: 2.5em;
+  height: 2.5em;
+  background-color: #fcb045;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+.textWrap h2 .textBg .textBox2 {
+  width: 2em;
+  height: 2em;
+  background-color: #fd1d1d;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.textWrap h2 .textBg .textBox3 {
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #3a4bb4;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.clockWrap {
+  padding: 1.5em;
+  position: absolute;
+  right: 3em;
+  bottom: 0em;
+  cursor: default;
+}
+
+.clockWrap p {
+  text-align: center;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 600;
+  color: #fff;
+}
+
+.clockWrap .calendar {
+  margin-bottom: 10px;
+}
+
+.clockWrap .calendar .day1 {
+  font-size: 0.9em;
+  vertical-align: middle;
+}
+
+.clockWrap .calendar .day2 {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  margin-left: 10px;
+  border-radius: 0.5em;
+  font-size: 0.8em;
+  vertical-align: middle;
+}
+
+.clockWrap .clock {
+  font-size: 1.5em;
+}
+
+.title {
+  position: absolute;
+  left: 0em;
+  top: 60%;
+  font-size: 1em;
+  font-family: "Nanum Gothic", sans-serif;
+  letter-spacing: 0.2em;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.title a {
+  color: #fff;
+}
 /*# sourceMappingURL=index.css.map */

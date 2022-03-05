@@ -45,6 +45,12 @@ function headerFun() {
   $('.mainMenu').on('mouseleave', function() {
     $('.cursor').removeClass('fadeout');
   });
+  $('.clockWrap').on('mouseenter', function() {
+    $('.cursor').addClass('fadeout');
+  });
+  $('.clockWrap').on('mouseleave', function() {
+    $('.cursor').removeClass('fadeout');
+  });
 }
 
 function footerFun() {
