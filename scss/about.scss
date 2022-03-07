@@ -1,0 +1,12 @@
+@import './common';
+
+
+.pageTitle{
+  position: fixed;
+  left: 0em; top: 47%;
+  font-size: 1em;
+  font-family: $nanum;
+  color: #fff;
+  letter-spacing: 2em;
+  transform: rotate(-90deg);
+}

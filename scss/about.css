@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Barriecito&family=Nanum+Gothic:wght@400;700;800&display=swap");
+body {
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure {
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+image {
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.material-icons-outlined {
+  font-family: 'Material Icons';
+}
+
+.pageTitle {
+  position: fixed;
+  left: 0em;
+  top: 47%;
+  font-size: 1em;
+  font-family: "Nanum Gothic", sans-serif;
+  color: #fff;
+  letter-spacing: 2em;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+/*# sourceMappingURL=about.css.map */

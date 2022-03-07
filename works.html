@@ -14,17 +14,90 @@
 
   <link rel="shortcut icon" href="./favicon.ico" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="./scss/bg.css" />
   <link rel="stylesheet" href="./scss/header-footer.css" />
+  <link rel="stylesheet" href="./scss/works.css" />
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+  <script defer src="./js/works.js"></script>
   <script defer src="./js/header-footer.js"></script>
 </head>
 <body>
   <header></header>
 
   <main>
-    WORKS 페이지
+    <div class="bgWrap">
+      <div class="bg"></div>
+    </div>
+
+    <h2 class="pageTitle">WORKS</h2>
+
+    <p class="description">
+      그동안 제가 작업한 결과물입니다. <br />
+      직접 기획과 구현 작업을 했으며, 대부분 반응형으로 제작했습니다.
+    </p>
+
+    <ul class="worksListWrap">
+      <li>
+        <figure>
+          <img src="./img/portfolio1.jpg" alt="portfolio img" />
+        </figure>
+        <figcaption>
+          <h3>Portfolio LEE SU HYUN</h3>
+          <p class="tech">
+            <span>HTML</span>
+            <span>SCSS</span>
+            <span>JAVASCRIPT</span>
+            <span>JQUERY</span>
+          </p>
+        </figcaption>
+      </li>
+      <li>
+        <figure>
+          <img src="./img/portfolio2.jpg" alt="portfolio img" />
+        </figure>
+        <figcaption>
+          <h3>MoodPly</h3>
+          <p class="tech">
+            <span>HTML</span>
+            <span>SCSS</span>
+            <span>JAVASCRIPT</span>
+            <span>REACT</span>
+            <span>Youtube API</span>
+          </p>
+        </figcaption>
+      </li>
+      <li>
+        <figure>
+          <img src="./img/portfolio3.jpg" alt="portfolio img" />
+        </figure>
+        <figcaption>
+          <h3>To do List</h3>
+          <p class="tech">
+            <span>HTML</span>
+            <span>SCSS</span>
+            <span>JAVASCRIPT</span>
+            <span>REACT</span>
+            <span>Firebase</span>
+          </p>
+        </figcaption>
+      </li>
+      <li>
+        <figure>
+          <img src="./img/portfolio4.jpg" alt="portfolio img" />
+        </figure>
+        <figcaption>
+          <h3>NSAD* Mobile Shopping Mall</h3>
+          <p class="tech">
+            <span>HTML</span>
+            <span>SCSS</span>
+            <span>JAVASCRIPT</span>
+            <span>JQUERY</span>
+          </p>
+        </figcaption>
+      </li>
+    </ul>
   </main>
 
   <footer></footer>

@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Barriecito&family=Nanum+Gothic:wght@400;700;800&display=swap");
+body {
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure {
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+image {
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.material-icons-outlined {
+  font-family: 'Material Icons';
+}
+
+.pageTitle {
+  position: fixed;
+  left: 0em;
+  top: 47%;
+  font-size: 1em;
+  font-family: "Nanum Gothic", sans-serif;
+  color: #fff;
+  letter-spacing: 2em;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.description {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 1.1em;
+  margin: 15em auto 5em;
+  line-height: 2;
+  text-shadow: 5px 5px 5px rgba(129, 129, 129, 0.3);
+}
+
+.worksListWrap {
+  width: 60vw;
+  margin: 5em auto 10em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.worksListWrap li {
+  width: 27vw;
+  margin: 3vw 0 2vw;
+  cursor: pointer;
+}
+
+.worksListWrap li figure {
+  width: 100%;
+  height: 27vw;
+  overflow: hidden;
+  -webkit-box-shadow: 10px 10px 10px rgba(129, 129, 129, 0.3);
+          box-shadow: 10px 10px 10px rgba(129, 129, 129, 0.3);
+}
+
+.worksListWrap li figure img {
+  width: 100%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.worksListWrap li figure img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.worksListWrap li figcaption {
+  width: 100%;
+  color: #fff;
+}
+
+.worksListWrap li figcaption h3 {
+  margin: 2em 0 0;
+  font-size: 1.5em;
+  text-shadow: 5px 5px 5px rgba(129, 129, 129, 0.3);
+}
+
+.worksListWrap li figcaption .tech {
+  margin: 1em 0 0;
+}
+
+.worksListWrap li figcaption .tech span {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  background-color: #aaa;
+  margin-right: 0.5em;
+  border-radius: 0.5em;
+  font-size: 0.9em;
+  -webkit-box-shadow: 5px 5px 5px rgba(129, 129, 129, 0.3);
+          box-shadow: 5px 5px 5px rgba(129, 129, 129, 0.3);
+}
+/*# sourceMappingURL=works.css.map */

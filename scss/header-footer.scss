@@ -10,12 +10,14 @@
   left: 0; top: 0;
   z-index: 10;
   h1{
-    font-size: 5em;
     text-align: center;
     animation: parrot 7s infinite ease-in-out;
     cursor: pointer;
     &:hover{
       animation-play-state: paused;
+    }
+    img{
+      width: 3em;
     }
   }
   .burger{
