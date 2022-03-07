@@ -50,3 +50,39 @@ window.addEventListener('mousemove', function(e) {
   }
 });
 
+$('.textWrap h2').on('click', () => {
+  $('.animationEn').css({
+    transform: 'translateX(200%)'
+  });
+  $('.animationKo').css({
+    transform: 'translateX(-200%)'
+  });
+  $('.animationJp').css({
+    transform: 'translateX(200%)'
+  });
+  setTimeout(() => {
+    $('.animationEn').css({
+      transform: 'translateX(-200%)',
+      transition: '0s'
+    });
+    $('.animationKo').css({
+      transform: 'translateX(200%)',
+      transition: '0s'
+    });
+    $('.animationJp').css({
+      transform: 'translateX(-200%)',
+      transition: '0s'
+    });
+  }, 4100)
+  setTimeout(() => {
+    $('.animationEn').css({
+      transition: '4s'
+    });
+    $('.animationKo').css({
+      transition: '4s'
+    });
+    $('.animationJp').css({
+      transition: '4s'
+    });
+  },4200)
+})
