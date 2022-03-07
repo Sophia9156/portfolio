@@ -41,14 +41,14 @@
   }
   .burger.active{
     span:nth-of-type(1){
-      background-color: rgba(253,29,29,1);
+      background-color: rgb(253,29,29);
       transform: translateY(0.8em) rotate(45deg);
     }
     span:nth-of-type(2){
       opacity: 0;
     }
     span:nth-of-type(3){
-      background-color: rgba(58,75,180,1);
+      background-color: rgb(58,75,180);
       transform: translateY(-0.8em) rotate(-45deg);
     }
   }

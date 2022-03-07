@@ -105,8 +105,17 @@ table {
 
 .worksListWrap li figcaption h3 {
   margin: 2em 0 0;
-  font-size: 1.5em;
+  font-size: 1.7em;
   text-shadow: 5px 5px 5px rgba(129, 129, 129, 0.3);
+}
+
+.worksListWrap li figcaption h3 .workType {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  background-color: #3a4bb4;
+  color: #fff;
 }
 
 .worksListWrap li figcaption .tech {
@@ -123,5 +132,131 @@ table {
   font-size: 0.9em;
   -webkit-box-shadow: 5px 5px 5px rgba(129, 129, 129, 0.3);
           box-shadow: 5px 5px 5px rgba(129, 129, 129, 0.3);
+}
+
+.displayWrap {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 11;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: none;
+}
+
+.displayWrap .display {
+  width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.displayWrap .display figure {
+  width: 40%;
+}
+
+.displayWrap .display figure img {
+  width: 100%;
+}
+
+.displayWrap .display figcaption {
+  width: 50%;
+}
+
+.displayWrap .display figcaption h4 {
+  font-size: 3em;
+  color: #666;
+  text-align: right;
+  margin-bottom: 2em;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.displayWrap .display figcaption li {
+  margin: 1em 0;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.displayWrap .display figcaption li dt {
+  font-size: 1em;
+  color: #888;
+  font-weight: 600;
+}
+
+.displayWrap .display figcaption li dd {
+  font-size: 1.1em;
+  color: #444;
+  margin: 1em 0 2em;
+  line-height: 2em;
+}
+
+.displayWrap .display figcaption .displayTech dd span {
+  display: inline-block;
+  padding: 0rem 0.7rem;
+  background-color: #aaa;
+  color: #fff;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 1em;
+  font-size: 0.8em;
+  -webkit-box-shadow: 5px 5px 5px rgba(129, 129, 129, 0.3);
+          box-shadow: 5px 5px 5px rgba(129, 129, 129, 0.3);
+}
+
+.displayWrap .display figcaption .displayLink {
+  text-align: right;
+  margin-top: 5em;
+}
+
+.displayWrap .display figcaption .displayLink a {
+  padding: 0.5em 1em;
+  background-color: #e7a807;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: "Nanum Gothic", sans-serif;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.displayWrap .display figcaption .displayLink a:hover {
+  background-color: #3f8b59;
+}
+
+.displayWrap .close {
+  width: 3em;
+  position: absolute;
+  right: 5%;
+  top: 3em;
+  cursor: pointer;
+}
+
+.displayWrap .close span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin: 0.6em 0;
+}
+
+.displayWrap .close span:nth-of-type(1) {
+  background-color: #fd1d1d;
+  -webkit-transform: translateY(0.4em) rotate(45deg);
+          transform: translateY(0.4em) rotate(45deg);
+}
+
+.displayWrap .close span:nth-of-type(2) {
+  background-color: #3a4bb4;
+  -webkit-transform: translateY(-0.4em) rotate(-45deg);
+          transform: translateY(-0.4em) rotate(-45deg);
 }
 /*# sourceMappingURL=works.css.map */
