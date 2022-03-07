@@ -1,66 +1,80 @@
 {
   "works":[
     {
+      "id":"1",
       "thumb":"img/work1.jpg",
       "video":"",
       "title":"도전! 랜덤 구구단",
+      "type":"개인 프로젝트",
       "period":"2021.12.15",
-      "tech":["HTML", "CSS", "JAVASCRIPT"],
+      "tech":["<span>HTML</span>", "<span>CSS</span>", "<span>JAVASCRIPT</span>"],
       "description":"JavaScript로 구현한 간단한 미니 구구단 게임입니다. JavaScript를 처음 배우기 시작했을 때 제작한 프로젝트로 JavaScript 기초 연산자와 setInterval, setTimeout, Math.random() 등을 이용하여 제작했습니다.",
       "url":"https://sophia9156.github.io/mini-game-gugudan/"
     },
     {
+      "id":"2",
       "thumb":"img/work2.jpg",
       "video":"",
       "title":"Vending Machine",
+      "type":"개인 프로젝트",
       "period":"2021.12.16",
-      "tech":["HTML", "SCSS", "JAVASCRIPT"],
+      "tech":["<span>HTML</span>", "<span>SCSS</span>", "<span>JAVASCRIPT</span>"],
       "description":"JavaScript로 구현한 간단한 자판기 게임입니다. 자판기에 넣은 금액이 충분할 때만 음료가 반환되도록 구현했습니다. createElement와 switch 문을 이용하여 조건문을 이해하고 로직을 구현했습니다.",
       "url":"https://sophia9156.github.io/vending-machine/"
     },
     {
+      "id":"3",
       "thumb":"img/work3.jpg",
       "video":"",
       "title":"Let me Post",
+      "type":"개인 프로젝트",
       "period":"2022.01.26 - 2022.01.28",
-      "tech":["HTML", "SCSS", "JAVASCRIPT", "PHP", "XAMPP"],
+      "tech":["<span>HTML</span>", "<span>SCSS</span>", "<span>JAVASCRIPT</span>", "<span>PHP</span>", "<span>XAMPP</span>"],
       "description":"기초 PHP 문법으로 CRUD를 구현하고 mariaDB를 이용하여 서버 구축을 했습니다. 닷홈을 이용하여 서버가 있는 웹호스팅을 구현했습니다. input multiple을 이용하여 사진을 여러 장 올릴 수 있는 Instagram과 비슷한 앱으로 제작했습니다.",
       "url":"http://suhyun91.dothome.co.kr/"
     },
     {
+      "id":"4",
       "thumb":"img/work4.jpg",
       "video":"",
       "title":"NSAD* Clone Site",
+      "type":"개인 프로젝트",
       "period":"2022.01.07 - 2022.01.19",
-      "tech":["HTML", "SCSS", "JAVASCRIPT", "JQUERY"],
+      "tech":["<span>HTML</span>", "<span>SCSS</span>", "<span>JAVASCRIPT</span>", "<span>JQUERY</span>"],
       "description":"JavaScript와 Jquery를 이용하여 남성복 스트릿 패션 브랜드의 온라인 쇼핑몰 사이트를 클론했습니다. 패션 브랜드이다 보니 비주얼적인 요소가 재밌는 것들이 많아 선택하게 되었고, 최대한 똑같이 구현하려고 노력했습니다. Jquery ajax를 이용하여 사용자가 요청한 데이터에 따라 화면을 동적으로 변경하여 표시하는 로직에 대해 익혔고, Local Storage를 이용하여 장바구니 기능을 구현했습니다. 슬라이드 기능은 플러그인의 도움을 받지 않고 직접 구현해서 무한 루프 슬라이드의 원리에 대해 익힐 수 있었습니다.",
       "url":"https://sophia9156.github.io/clone-mobile-NSAD/"
     },
     {
+      "id":"5",
       "thumb":"img/work5.jpg",
       "video":"",
       "title":"MoodPly",
+      "type":"개인 프로젝트",
       "period":"2022.02.15 - 2022.02.22",
-      "tech":["HTML", "SCSS", "JAVASCRIPT", "REACT", "YoutubeAPI"],
+      "tech":["<span>HTML</span>", "<span>SCSS</span>", "<span>JAVASCRIPT</span>", "<span>REACT</span>", "<span>YoutubeAPI</span>"],
       "description":"REACT.js를 이용하여 제작한 첫 프로젝트로 Youtube API를 활용하여 제작한 뮤직 플레이리스트 추천 앱입니다. 제가 음악을 많이 듣기 때문에 제가 자주 사용할 수 있는 앱을 만들고 싶다고 생각했고, 키워드 검색을 이용하여 그날의 기분에 따라 듣고 싶은 플레이리스트를 추천할 수 있도록 구현했습니다. Youtube에서 제공하는 iframe을 이용하여 동영상을 실제 플레이할 수 있도록 제작했습니다.",
       "url":"https://sophia9156.github.io/react-music-app/"
     },
     {
+      "id":"6",
       "thumb":"img/work6.jpg",
       "video":"",
       "title":"To do List",
+      "type":"개인 프로젝트",
       "period":"2022.02.22 - 2022.03.03",
-      "tech":["HTML", "SCSS", "JAVASCRIPT", "REACT", "REDUX", "Firebase"],
+      "tech":["<span>HTML</span>", "<span>SCSS</span>", "<span>JAVASCRIPT</span>", "<span>REACT</span>", "<span>REDUX</span>", "<span>Firebase</span>"],
       "description":"REACT.js를 이용하여 제작한 두 번째 프로젝트 입니다. 상태관리는 REDUX를 이용하여 구현했고, Firebase에서 제공하는 인증, 호스팅, 실시간 데이터베이스를 이용하여 로그인 기능과 서버 기능을 추가했습니다. 구글 로그인을 이용하여 로그인한 사용자가 등록한 데이터만 보이도록 구현했습니다.",
       "url":"https://todolist-96e40.firebaseapp.com/"
     },
     {
+      "id":"7",
       "thumb":"img/work7.jpg",
       "video":"",
       "title":"Portfolio LEE SU HYUN",
+      "type":"개인 프로젝트",
       "period":"2022.03.04 - 2022.03.",
-      "tech":["HTML", "SCSS", "JAVASCRIPT", "JQUERY"],
-      "description":"사용자와의 상호작용이 크지 않은 프로젝트라고 생각해서 REACT보다는 JavaScript로 제작하는 것이 효율적이라는 판단하에 제작된 포트폴리오 웹사이트입니다. 제 개인 웹사이트를 제작하는 것이라 제가 구현해보고 싶은 다양한 애니메이션을 활용하여 제작했습니다. 데이터는 fetch를 이용하여 변경하도록 만들어 추후 업데이트를 용이하게 제작했습니다.",
+      "tech":["<span>HTML</span>", "<span>SCSS</span>", "<span>JAVASCRIPT</span>", "<span>JQUERY</span>"],
+      "description":"제 개인 웹사이트를 제작하는 것이라 제가 구현해보고 싶은 다양한 애니메이션을 활용하여 제작했습니다. 데이터는 fetch를 이용하여 변경하도록 만들어 추후 업데이트를 용이하게 제작했습니다.",
       "url":"https://sophia9156.github.io/portfolio/"
     }
   ]
