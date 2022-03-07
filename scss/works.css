@@ -101,6 +101,7 @@ table {
 .worksListWrap li figcaption {
   width: 100%;
   color: #fff;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 .worksListWrap li figcaption h3 {
