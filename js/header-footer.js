@@ -1,5 +1,6 @@
 $('header').load('header-footer.html .header', headerFun);
 $('footer').load('header-footer.html .footer', footerFun);
+$('.goToTop').load('header-footer.html .arrow', arrowFun);
 
 function headerFun() {
   // 메뉴 토글
@@ -72,6 +73,12 @@ function headerFun() {
   $('.mainMenu').on('mouseleave', function() {
     $('.cursor').removeClass('fadeout');
   });
+  $('.goToTop').on('mouseenter', function() {
+    $('.cursor').addClass('active');
+  });
+  $('.goToTop').on('mouseleave', function() {
+    $('.cursor').removeClass('active');
+  });
   $('.clockWrap').on('mouseenter', function() {
     $('.cursor').addClass('fadeout');
   });
@@ -83,6 +90,21 @@ function headerFun() {
   });
   $('.description').on('mouseleave', function() {
     $('.cursor').removeClass('fadeout');
+  });
+}
+
+function arrowFun() {
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > window.innerHeight){
+      $('.goToTop').addClass('active');
+    } else {
+      $('.goToTop').removeClass('active');
+    }
+  });
+  $('.goToTop').on('click', () => {
+    window.scrollTo({
+      top: 0,
+    })
   });
 }
 

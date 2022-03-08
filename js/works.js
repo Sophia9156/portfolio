@@ -26,9 +26,10 @@ async function changeData() {
           </li>
         `;
       });
-      worksList.innerHTML = list;      
+      worksList.innerHTML = list;
 
-      const work = document.querySelectorAll('.worksListWrap li');
+      const works = document.querySelectorAll('.worksListWrap li');
+
       const display = document.querySelector('.displayWrap');
       const displayThumb = document.querySelector('.displayThumb');
       const displayTitle = document.querySelector('.display h4');
@@ -36,7 +37,9 @@ async function changeData() {
       const displayTech = document.querySelector('.displayTech dd');
       const displayDescription = document.querySelector('.displayDescription dd');
       const displayLink = document.querySelector('.displayLink a');
-      work.forEach((work, key) => {
+
+      // 리스트 클릭 시 디스플레이 표시
+      works.forEach((work, key) => {
         work.addEventListener('click', () => {
           displayThumb.setAttribute('src', data.works[key].thumb);
           displayTitle.textContent = data.works[key].title;
@@ -47,10 +50,21 @@ async function changeData() {
           display.style.display = 'block';
         })
       });
+
+      // 디스플레이 닫기
       const displayClose = document.querySelector('.close');
       displayClose.addEventListener('click', () => {
         display.style.display = 'none';
       });
+
+      // 스크롤 시 리스트 올라오기
+      window.onscroll = () => {
+        works.forEach(work => {
+          if(work.offsetTop - window.innerHeight * 0.5 < window.scrollY){
+            work.classList.add('active');
+          }
+        });
+      }
     }
   )
 }

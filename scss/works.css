@@ -73,10 +73,41 @@ table {
       flex-wrap: wrap;
 }
 
+.worksListWrap li.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
 .worksListWrap li {
   width: 27vw;
   margin: 3vw 0 2vw;
   cursor: pointer;
+  -webkit-transform: translateY(10em);
+          transform: translateY(10em);
+  opacity: 0;
+}
+
+.worksListWrap li:nth-of-type(odd) {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.worksListWrap li:nth-of-type(even) {
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.worksListWrap li:nth-of-type(1) {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.worksListWrap li:nth-of-type(2) {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .worksListWrap li figure {
@@ -165,6 +196,11 @@ table {
 
 .displayWrap .display figure {
   width: 40%;
+  -webkit-transform: translateY(2em);
+          transform: translateY(2em);
+  opacity: 0;
+  -webkit-animation: showUp .8s forwards linear;
+          animation: showUp .8s forwards linear;
 }
 
 .displayWrap .display figure img {
@@ -181,6 +217,11 @@ table {
   text-align: right;
   margin-bottom: 2em;
   font-family: "Nanum Gothic", sans-serif;
+  -webkit-transform: translateY(2em);
+          transform: translateY(2em);
+  opacity: 0;
+  -webkit-animation: showUp .8s forwards linear;
+          animation: showUp .8s forwards linear;
 }
 
 .displayWrap .display figcaption li {
@@ -192,6 +233,11 @@ table {
   font-size: 1em;
   color: #888;
   font-weight: 600;
+  -webkit-transform: translateY(2em);
+          transform: translateY(2em);
+  opacity: 0;
+  -webkit-animation: showUp .3s forwards linear;
+          animation: showUp .3s forwards linear;
 }
 
 .displayWrap .display figcaption li dd {
@@ -199,6 +245,31 @@ table {
   color: #444;
   margin: 1em 0 2em;
   line-height: 2em;
+  -webkit-transform: translateY(2em);
+          transform: translateY(2em);
+  opacity: 0;
+  -webkit-animation: showUp .3s forwards linear;
+          animation: showUp .3s forwards linear;
+}
+
+.displayWrap .display figcaption .displayPeriod dt {
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+}
+
+.displayWrap .display figcaption .displayPeriod dd {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+.displayWrap .display figcaption .displayTech dt {
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+.displayWrap .display figcaption .displayTech dd {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
 }
 
 .displayWrap .display figcaption .displayTech dd span {
@@ -212,6 +283,18 @@ table {
   font-size: 0.8em;
   -webkit-box-shadow: 5px 5px 5px rgba(129, 129, 129, 0.3);
           box-shadow: 5px 5px 5px rgba(129, 129, 129, 0.3);
+}
+
+.displayWrap .display figcaption .displayDescription dt {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.displayWrap .display figcaption .displayDescription dd {
+  height: 9em;
+  overflow: auto;
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
 }
 
 .displayWrap .display figcaption .displayLink {
@@ -259,5 +342,31 @@ table {
   background-color: #3a4bb4;
   -webkit-transform: translateY(-0.4em) rotate(-45deg);
           transform: translateY(-0.4em) rotate(-45deg);
+}
+
+@-webkit-keyframes showUp {
+  0% {
+    -webkit-transform: translateY(2em);
+            transform: translateY(2em);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showUp {
+  0% {
+    -webkit-transform: translateY(2em);
+            transform: translateY(2em);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=works.css.map */
