@@ -12,8 +12,8 @@ main{
       height: 500vw;
       position: absolute;
       left: calc(50% - 250vw); top: calc(50% - 250vw);
-      background: rgb(58,75,180);
-      background: linear-gradient(-45deg, rgba(58,75,180,0.5) 40%, rgba(253,29,29,0.5) 50%, rgba(252,176,69,0.5) 60%);
+      background: $blue;
+      background: linear-gradient(-45deg, rgba($blue, 0.5) 40%, rgba($red, 0.5) 50%, rgba($yellow, 0.5) 60%);
       animation: wave2 9s infinite linear;
     }
   }

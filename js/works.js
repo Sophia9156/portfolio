@@ -1,11 +1,11 @@
+const worksList = document.querySelector('.worksListWrap');
+let list = '';
+
 async function changeData() {
   await fetch('data.json')
   .then((data) => data.json())
   .then(
     data => {
-      const worksList = document.querySelector('.worksListWrap');
-      let list = '';
-
       data.works.reverse().forEach(work => {
         list += `
           <li>
@@ -15,16 +15,18 @@ async function changeData() {
             <figcaption>
               <h3>
                 ${work.title}
-                <span class="workType">${work.type}</span>
+                <span class="workType">
+                  ${work.type}
+                </span>
               </h3>
               <p class="tech">
                 ${work.tech.join('')}
               </p>
             </figcaption>
           </li>
-        `
+        `;
       });
-      worksList.innerHTML = list;
+      worksList.innerHTML = list;      
 
       const work = document.querySelectorAll('.worksListWrap li');
       const display = document.querySelector('.displayWrap');

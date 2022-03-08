@@ -19,15 +19,15 @@
   }
   .animationEn{
     transform: translateX(-200%);
-    color: rgb(252,176,69);
+    color: $yellow;
   }
   .animationKo{
     transform: translateX(200%);
-    color: rgb(58,75,180);
+    color: $blue;
   }
   .animationJp{
     transform: translateX(-200%);
-    color: rgb(253,29,29);
+    color: $red;
   }
 }
 .textWrap{
@@ -61,19 +61,19 @@
       .textBox1{
         width: 2.5em;
         height: 2.5em;
-        background-color: rgb(252,176,69);
+        background-color: $yellow;
         transition: .6s;
       }
       .textBox2{
         width: 2em;
         height: 2em;
-        background-color: rgb(253,29,29);
+        background-color: $red;
         transition: .4s;
       }
       .textBox3{
         width: 1.5em;
         height: 1.5em;
-        background-color: rgb(58,75,180);
+        background-color: $blue;
         transition: .2s;
       }
     }

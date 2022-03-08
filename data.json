@@ -26,7 +26,7 @@
       "title":"Let me Post",
       "type":"개인 프로젝트",
       "period":"2022.01.26 - 2022.01.28",
-      "tech":["<span>HTML</span>", "<span>SCSS</span>", "<span>JAVASCRIPT</span>", "<span>PHP</span>", "<span>XAMPP</span>"],
+      "tech":["<span>HTML</span>", "<span>SCSS</span>", "<span>JAVASCRIPT</span>", "<span>PHP</span>", "<span>MariaDB</span>"],
       "description":"기초 PHP 문법으로 CRUD를 구현하고 mariaDB를 이용하여 서버 구축을 했습니다. 닷홈을 이용하여 서버가 있는 웹호스팅을 구현했습니다. input multiple을 이용하여 사진을 여러 장 올릴 수 있는 Instagram과 비슷한 앱으로 제작했습니다.",
       "url":"http://suhyun91.dothome.co.kr/"
     },
@@ -37,7 +37,7 @@
       "type":"개인 프로젝트",
       "period":"2022.01.07 - 2022.01.19",
       "tech":["<span>HTML</span>", "<span>SCSS</span>", "<span>JAVASCRIPT</span>", "<span>JQUERY</span>"],
-      "description":"JavaScript와 Jquery를 이용하여 남성복 스트릿 패션 브랜드의 온라인 쇼핑몰 사이트를 클론했습니다. 패션 브랜드이다 보니 비주얼적인 요소가 재밌는 것들이 많아 선택하게 되었고, 최대한 똑같이 구현하려고 노력했습니다. Jquery ajax를 이용하여 사용자가 요청한 데이터에 따라 화면을 동적으로 변경하여 표시하는 로직에 대해 익혔고, Local Storage를 이용하여 장바구니 기능을 구현했습니다. 슬라이드 기능은 플러그인의 도움을 받지 않고 직접 구현해서 무한 루프 슬라이드의 원리에 대해 익힐 수 있었습니다.",
+      "description":"JavaScript와 Jquery를 이용하여 남성복 스트릿 패션 브랜드의 모바일 전용 온라인 쇼핑몰 사이트를 클론했습니다. 패션 브랜드이다 보니 비주얼적인 요소가 재밌는 것들이 많아 선택하게 되었고, 최대한 똑같이 구현하려고 노력했습니다. Jquery ajax를 이용하여 사용자가 요청한 데이터에 따라 화면을 동적으로 변경하여 표시하는 로직에 대해 익혔고, Local Storage를 이용하여 장바구니 기능을 구현했습니다. 슬라이드 기능은 플러그인의 도움을 받지 않고 직접 구현해서 무한 루프 슬라이드의 원리에 대해 익힐 수 있었습니다.",
       "url":"https://sophia9156.github.io/clone-mobile-NSAD/"
     },
     {

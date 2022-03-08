@@ -22,8 +22,8 @@
     position: absolute;
     left: calc(50% - 250vw); top: calc(50% - 250vw);
     border-radius: 50%;
-    background: rgb(58,75,180);
-    background: linear-gradient(-45deg, rgb(58,75,180) 40%, rgb(253,29,29) 50%, rgb(252,176,69) 60%);
+    background: $blue;
+    background: linear-gradient(-45deg, $blue 40%, $red 50%, $yellow 60%);
     animation: wave 9s forwards linear;
   }
   .text{

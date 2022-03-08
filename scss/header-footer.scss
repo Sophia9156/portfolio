@@ -34,21 +34,21 @@
       transition: .4s;
     }
     &:hover{
-      span:nth-of-type(1){background-color: rgb(252,176,69);}
-      span:nth-of-type(2){background-color: rgb(253,29,29);}
-      span:nth-of-type(3){background-color: rgb(58,75,180);}
+      span:nth-of-type(1){background-color: $yellow;}
+      span:nth-of-type(2){background-color: $red;}
+      span:nth-of-type(3){background-color: $blue;}
     }
   }
   .burger.active{
     span:nth-of-type(1){
-      background-color: rgb(253,29,29);
+      background-color: $red;
       transform: translateY(0.8em) rotate(45deg);
     }
     span:nth-of-type(2){
       opacity: 0;
     }
     span:nth-of-type(3){
-      background-color: rgb(58,75,180);
+      background-color: $blue;
       transform: translateY(-0.8em) rotate(-45deg);
     }
   }
@@ -70,7 +70,7 @@
   height: 100vh;
   position: absolute;
   right: 0; top: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(#fff, 0.9);
   transform: translate(100%, -200%) rotate(90deg);
   transition: 1s;
   display: flex;
@@ -85,14 +85,14 @@
       display: block;
       padding: 10px;
       margin: 10px 0;
-      color: rgba(58,75,180,0.5);
+      color: rgba($blue, 0.5);
       font-size: 5em;
       font-weight: 700;
       transition: .4s;
-      border: 2px solid rgba(58,75,180,0);
+      border: 2px solid rgba($blue, 0);
       &:hover{
-        color: rgb(58,75,180);
-        border: 2px solid rgba(58,75,180,0.5);
+        color: $blue;
+        border: 2px solid rgba($blue, 0.5);
       }
     }
   }
@@ -100,14 +100,14 @@
     a{
       display: inline-block;
       padding: 10px;
-      color: rgba(253,29,29,0.5);
+      color: rgba($red, 0.5);
       font-size: 2em;
       font-weight: 700;
       transition: .4s;
-      border: 2px solid rgba(253,29,29,0);
+      border: 2px solid rgba($red, 0);
       &:hover{
-        color: rgb(253,29,29);
-        border: 2px solid rgba(253,29,29,0.5);
+        color: $red;
+        border: 2px solid rgba($red, 0.5);
       }
     }
   }
@@ -131,7 +131,7 @@
     background-color: #fff;
     border: 2px solid #fff;
     border-radius: 3em;
-    color: rgba(253,29,29,0.5);
+    color: rgba($red, 0.5);
     font-size: 1.2em;
     font-weight: 700;
     margin: 0 20px;
@@ -167,7 +167,7 @@
   height: 1.5em;
   position: absolute;
   border-radius: 100%;
-  background-color: rgb(195, 0, 255);
+  background-color: $purple;
   transition: .2s;
   z-index: -1;
 }
@@ -204,18 +204,18 @@
     border-radius: 100%;
     animation: circlemove 2s infinite;
     &:nth-of-type(1){
-      background-color: rgb(253,29,29);
+      background-color: $red;
     }
     &:nth-of-type(2){
-      background-color: rgb(58,75,180);
+      background-color: $blue;
       animation-delay: -0.5s;
     }
     &:nth-of-type(3){
-      background-color: rgb(252,176,69);
+      background-color: $yellow;
       animation-delay: -1s;
     }
     &:nth-of-type(4){
-      background-color: rgb(195, 0, 255);
+      background-color: $purple;
       animation-delay: -1.5s;
     }
   }

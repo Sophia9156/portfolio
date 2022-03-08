@@ -78,6 +78,12 @@ function headerFun() {
   $('.clockWrap').on('mouseleave', function() {
     $('.cursor').removeClass('fadeout');
   });
+  $('.description').on('mouseenter', function() {
+    $('.cursor').addClass('fadeout');
+  });
+  $('.description').on('mouseleave', function() {
+    $('.cursor').removeClass('fadeout');
+  });
 }
 
 function footerFun() {

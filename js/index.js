@@ -17,13 +17,17 @@ setInterval(() => {
   $('.clock').text(`${modifyNumber(time.getHours())} : ${modifyNumber(time.getMinutes())} : ${modifyNumber(time.getSeconds())}`)
 }, 100);
 
-if(date.getDay() === 0 || date.getDay() === 6){
+if(date.getDay() === 0){
   $('.day2').css({
     backgroundColor: 'rgb(253, 29, 29)'
   });
-} else {
+} else if(date.getDay() === 6){
   $('.day2').css({
     backgroundColor: 'rgb(58,75,180)'
+  });
+} else {
+  $('.day2').css({
+    backgroundColor: 'rgb(195, 0, 255)'
   });
 }
 
