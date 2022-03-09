@@ -68,11 +68,38 @@ table {
   width: 3em;
 }
 
+.header .language {
+  position: absolute;
+  right: 10%;
+  top: 3.8rem;
+}
+
+.header .language span {
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Nanum Gothic", sans-serif;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.header .language span.active {
+  font-weight: 700;
+  color: white;
+}
+
+.header .language i {
+  display: inline-block;
+  width: 2px;
+  height: 20px;
+  background-color: #fff;
+  vertical-align: middle;
+}
+
 .header .burger {
   width: 3em;
   position: absolute;
   right: 5%;
-  top: 3em;
+  top: 3rem;
   cursor: pointer;
 }
 

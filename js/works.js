@@ -36,7 +36,8 @@ async function changeData() {
       const displayPeriod = document.querySelector('.displayPeriod dd');
       const displayTech = document.querySelector('.displayTech dd');
       const displayDescription = document.querySelector('.displayDescription dd');
-      const displayLink = document.querySelector('.displayLink a');
+      const displayPage = document.querySelector('.goToPage');
+      const displayGithub = document.querySelector('.goToGithub');
 
       // 리스트 클릭 시 디스플레이 표시
       works.forEach((work, key) => {
@@ -46,7 +47,8 @@ async function changeData() {
           displayPeriod.textContent = data.works[key].period;
           displayTech.innerHTML = data.works[key].tech.join('');
           displayDescription.textContent = data.works[key].description;
-          displayLink.setAttribute('href', data.works[key].url);
+          displayPage.setAttribute('href', data.works[key].url);
+          displayGithub.setAttribute('href', data.works[key].github);
           display.style.display = 'block';
         })
       });

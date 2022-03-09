@@ -95,7 +95,7 @@ function headerFun() {
 
 function arrowFun() {
   window.addEventListener('scroll', () => {
-    if(window.scrollY > window.innerHeight){
+    if(window.scrollY > window.innerHeight * 0.8){
       $('.goToTop').addClass('active');
     } else {
       $('.goToTop').removeClass('active');
