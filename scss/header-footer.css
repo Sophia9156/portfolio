@@ -36,7 +36,7 @@ table {
 
 .header {
   width: 100%;
-  padding: 2em 0;
+  padding: 2em 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,6 +72,7 @@ table {
   position: absolute;
   right: 10%;
   top: 3.8rem;
+  opacity: 0;
 }
 
 .header .language span {
@@ -426,6 +427,65 @@ table {
           transform: translateY(0);
   opacity: 1;
   pointer-events: all;
+}
+
+.contactWrap {
+  position: fixed;
+  left: 5%;
+  bottom: 4rem;
+  z-index: 10;
+}
+
+.contactWrap .contact {
+  cursor: pointer;
+}
+
+.contactWrap .contact span {
+  display: inline-block;
+  padding: 2rem;
+  font-size: 3em;
+  color: #fff;
+}
+
+.contactWrap .contact .contactBox.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.contactWrap .contact .contactBox {
+  position: absolute;
+  left: 0;
+  bottom: 5rem;
+  padding: 2rem;
+  opacity: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.contactWrap .contact .contactBox li {
+  margin: 1em 0;
+  font-size: 1em;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 600;
+}
+
+.contactWrap .contact .contactBox li dt {
+  color: tomato;
+}
+
+.contactWrap .contact .contactBox li dd {
+  color: #fff;
+}
+
+.contactWrap .contact .contactBox li dd a {
+  color: #fff;
+}
+
+.contactWrap .contact .contactBox li dd a:hover {
+  text-decoration: underline;
 }
 
 .footer {

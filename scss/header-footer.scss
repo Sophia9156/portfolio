@@ -4,7 +4,7 @@
 // header
 .header{
   width: 100%;
-  padding: 2em 0;
+  padding: 2em 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +25,7 @@
   .language{
     position: absolute;
     right: 10%; top: 3.8rem;
+    opacity: 0;
     span{
       font-size: 1.2em;
       color: rgba(#fff, 0.5);
@@ -223,6 +224,53 @@
   transform: translateY(0);
   opacity: 1;
   pointer-events: all;
+}
+
+
+// contact
+.contactWrap{
+  position: fixed;
+  left: 5%; bottom: 4rem;
+  z-index: 10;
+  .contact{
+    cursor: pointer;
+    span{
+      display: inline-block;
+      padding: 2rem;
+      font-size: 3em;
+      color: #fff;
+    }
+    .contactBox.active{
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .contactBox{
+      position: absolute;
+      left: 0; bottom: 5rem;
+      padding: 2rem;
+      opacity: 0;
+      transform: translateY(50%);
+      transition: .5s;
+      li{
+        margin: 1em 0;
+        font-size: 1em;
+        font-family: $nanum;
+        font-weight: 600;
+        dt{
+          color: tomato;
+        }
+        dd{
+          color: #fff;
+          a{
+            color: #fff;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 

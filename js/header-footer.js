@@ -1,6 +1,7 @@
 $('header').load('header-footer.html .header', headerFun);
 $('footer').load('header-footer.html .footer', footerFun);
 $('.goToTop').load('header-footer.html .arrow', arrowFun);
+$('.contactWrap').load('header-footer.html .contact', contactFun);
 
 function headerFun() {
   // 메뉴 토글
@@ -79,6 +80,12 @@ function headerFun() {
   $('.goToTop').on('mouseleave', function() {
     $('.cursor').removeClass('active');
   });
+  $('.contactWrap').on('mouseenter', function() {
+    $('.cursor').addClass('active');
+  });
+  $('.contactWrap').on('mouseleave', function() {
+    $('.cursor').removeClass('active');
+  });
   $('.clockWrap').on('mouseenter', function() {
     $('.cursor').addClass('fadeout');
   });
@@ -112,6 +119,12 @@ function arrowFun() {
       top: 0,
     })
   });
+}
+
+function contactFun() {
+  $('.contactWrap').on('click', () => {
+    $('.contactBox').toggleClass('active')
+  })
 }
 
 function footerFun() {

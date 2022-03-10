@@ -88,5 +88,47 @@
       "url":"https://sophia9156.github.io/mini-game-puzzle/",
       "github":"https://github.com/Sophia9156/mini-game-puzzle"
     }
+  ],
+  "skills":[
+    {
+      "name":"HTML",
+      "thumb":"img/html.png",
+      "detail":"시맨틱 태그의 의미를 이해하며, 웹 표준을 준수하는 문법을 구사할 수 있습니다."
+    },
+    {
+      "name":"CSS",
+      "thumb":"img/css.png",
+      "detail":"Flexbox의 형태를 이해하며, 미디어쿼리를 이용한 반응형 웹페이지와 다양한 애니메이션 구현할 수 있습니다."
+    },
+    {
+      "name":"JavaScript",
+      "thumb":"img/javascript.png",
+      "detail":"mixin, 변수설정, 내장함수, nesting 문법에 대해 이해하고 있으며, CSS보다는 주로 SCSS를 사용하고 있습니다."
+    },
+    {
+      "name":"SASS",
+      "thumb":"img/sass.png",
+      "detail":"mixin, 변수설정, 내장함수, nesting 문법에 대해 이해하고 있으며, CSS보다는 주로 SCSS를 사용하고 있습니다."
+    },
+    {
+      "name":"JQUERY",
+      "thumb":"img/jquery.png",
+      "detail":"JavaScript의 보조 툴로써 UI 구현 등에 사용할 수 있습니다."
+    },
+    {
+      "name":"REACT",
+      "thumb":"img/react.png",
+      "detail":"싱글페이지 웹페이지와 SSR과 CSR의 차이에 대해 이해하고 있습니다. JSX 문법과 state, props를 이용해 데이터를 관리할 수 있고, react-router-dom을 이용해 페이지 롸우팅을 구현할 수 있습니다. Class 컴포넌트와 Function 컴포넌트의 차이를 이해하고 있고, HOOK을 이용해 원하는 기능을 만들 수 있습니다."
+    },
+    {
+      "name":"Redux",
+      "thumb":"img/redux.png",
+      "detail":"사용해본 경험이 있고, 아직 완벽하게 이해하고 있진 않지만, 기본 Action, Reducer, Store를 통해 상태관리를 할 수 있습니다."
+    },
+    {
+      "name":"PHP",
+      "thumb":"img/php.png",
+      "detail":"데이터베이스를 생성하고 데이터베이스와 상호작용을 통해 데이터를 저장하고 표현할 수 있습니다."
+    }
   ]
 }

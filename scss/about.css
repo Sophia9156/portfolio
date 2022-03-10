@@ -124,6 +124,18 @@ table {
   border-radius: 1.5rem;
 }
 
+.profile .profileName span {
+  vertical-align: middle;
+}
+
+.profile .profileName .scrollDown {
+  margin: 5rem auto;
+  color: #fff;
+  font-family: "Nanum Gothic", sans-serif;
+  -webkit-animation: fadein2 5s infinite ease-in-out;
+          animation: fadein2 5s infinite ease-in-out;
+}
+
 @-webkit-keyframes fadein {
   0% {
     -webkit-transform: translateY(30%);
@@ -147,6 +159,54 @@ table {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein2 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadein2 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -500,5 +560,71 @@ table {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
+}
+
+.skillsWrap {
+  width: 100%;
+  margin: 5rem auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.skillsWrap .skillContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  margin: 5rem auto;
+}
+
+.skillsWrap .skillContainer li.active {
+  opacity: 1;
+}
+
+.skillsWrap .skillContainer li {
+  width: 7%;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.skillsWrap .skillContainer li img {
+  width: 100%;
+}
+
+.skillsWrap .skills-detail {
+  width: 30rem;
+  height: 30rem;
+  margin: 10rem auto 5rem;
+  background-color: rgba(255, 99, 71, 0.3);
+  padding: 3rem;
+  border-radius: 50%;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: scale(0.3) translate(10rem, -20rem);
+          transform: scale(0.3) translate(10rem, -20rem);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.skillsWrap .skills-detail li {
+  width: 100%;
+  line-height: 2rem;
+  text-align: center;
+  color: #fff;
 }
 /*# sourceMappingURL=about.css.map */
