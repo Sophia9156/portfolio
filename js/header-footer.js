@@ -91,6 +91,12 @@ function headerFun() {
   $('.description').on('mouseleave', function() {
     $('.cursor').removeClass('fadeout');
   });
+  $('.resume').on('mouseenter', function() {
+    $('.cursor').addClass('fadeout');
+  });
+  $('.resume').on('mouseleave', function() {
+    $('.cursor').removeClass('fadeout');
+  });
 }
 
 function arrowFun() {

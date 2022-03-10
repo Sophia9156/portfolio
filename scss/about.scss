@@ -10,3 +10,224 @@
   letter-spacing: 2em;
   transform: rotate(-90deg);
 }
+
+
+// profile
+.profile{
+  width: 100%;
+  margin: 15rem auto 5rem;
+  text-align: center;
+  .profileImg{
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto;
+    position: relative;
+    img{
+      width: 100%;
+      position: absolute;
+      left: 0; top: 0;
+      z-index: 3;
+      transform: translateY(30%);
+      opacity: 0;
+      animation: fadein .5s forwards ease-in;
+    }
+    span{
+      width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+      position: absolute;
+      left: 0; top: 0;
+      opacity: 0;
+    }
+    .circleRed{
+      background-color: $red;
+      animation: blink2 10s infinite linear;
+      animation-delay: 1.5s;
+    }
+    .circleBlue{
+      background-color: $blue;
+      animation: blink1 10s infinite linear;
+      animation-delay: 1s;
+    }
+    .circleYellow{
+      background-color: $yellow;
+      animation: blink1 10s infinite linear;
+      animation-delay: 2.5s;
+    }
+  }
+  .profileName{
+    h3{
+      margin: 3rem auto;
+      font-size: 2rem;
+      font-family: $nanum;
+      color: #fff;
+    }
+    .resume{
+      display: inline-block;
+      margin: 0 auto 1rem;
+      padding: 1rem 1.5rem;
+      background-color: #fff;
+      color: salmon;
+      font-size: 1.2rem;
+      font-family: $nanum;
+      border-radius: 1.5rem;
+    }
+  }
+}
+
+@keyframes fadein {
+  0%{
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes blink1 {
+  0%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  1%{
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  10%{
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  11%{
+    opacity: 1;
+    transform: translateX(-200%);
+  }
+  20%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  21%{
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  30%{
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  31%{
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  40%{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  41%{
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  50%{
+    opacity: 0;
+    transform: translateX(200%);
+  }
+  51%{
+    opacity: 1;
+    transform: translateX(200%);
+  }
+  60%{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  61%{
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  70%{
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  71%{
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  100%{
+    opacity: 0;
+    transform: translateX(0%);
+  }
+}
+@keyframes blink2 {
+  0%{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  1%{
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  10%{
+    opacity: 0;
+    transform: translateX(200%);
+  }
+  11%{
+    opacity: 1;
+    transform: translateX(200%);
+  }
+  20%{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  21%{
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  30%{
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  31%{
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  40%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  41%{
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  50%{
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  51%{
+    opacity: 1;
+    transform: translateX(-200%);
+  }
+  60%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  61%{
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  70%{
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  71%{
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  100%{
+    opacity: 0;
+    transform: translateX(0%);
+  }
+}
+
+
+// skills
+.skills{
+  
+}
