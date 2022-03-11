@@ -266,10 +266,10 @@ table {
     bottom: 1em;
   }
   .clockWrap .calendar .day1 {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   .clockWrap .calendar .day2 {
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
   .clockWrap .clock {
     font-size: 1.2em;
@@ -277,7 +277,7 @@ table {
   .title {
     left: -3em;
     top: 25%;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 }
 /*# sourceMappingURL=index.css.map */

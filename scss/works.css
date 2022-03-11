@@ -599,13 +599,13 @@ table {
     font-size: 1.1em;
   }
   .worksListWrap li figcaption h3 .workType {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
   .worksListWrap li figcaption .tech {
     margin: 0.5em 0 0;
   }
   .worksListWrap li figcaption .tech span {
-    font-size: 0.7em;
+    font-size: 0.5em;
   }
   .displayWrap .display {
     width: 95%;
