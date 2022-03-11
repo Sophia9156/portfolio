@@ -1,3 +1,6 @@
+@import './common';
+
+
 main{
   position: relative;
   .bgWrap{
@@ -25,10 +28,24 @@ main{
   20%{transform: scale(80%) translate(-30vw, -30vw) rotate(30deg);}
   30%{transform: scale(100%) translate(0, 0) rotate(10deg);}
   40%{transform: scale(80%) translate(10vw, 10vw) rotate(-10deg);}
-  50%{transform: scale(50%) translate(25vw, 25vw) rotate(-30deg);}
+  50%{transform: scale(80%) translate(25vw, 25vw) rotate(-30deg);}
   60%{transform: scale(100%) translate(0vw, 0vw) rotate(-60deg);}
   70%{transform: scale(80%) translate(-10vw, -10vw) rotate(-50deg);}
-  80%{transform: scale(50%) translate(0, 0) rotate(-30deg);}
+  80%{transform: scale(80%) translate(0, 0) rotate(-30deg);}
   85%{transform: scale(100%) translate(0, 0) rotate(20deg);}
   100%{transform: translate(0, 0) rotate(0);}
+}
+
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/ 
+@media all and (max-width:479px) {
+  .bg{
+    width: 600vw;
+    height: 600vw;
+    position: absolute;
+    left: calc(50% - 350vw); top: calc(50% - 350vw);
+    background: $blue;
+    background: linear-gradient(-45deg, rgba($blue, 0.5) 40%, rgba($red, 0.5) 50%, rgba($yellow, 0.5) 60%);
+    animation: wave2 9s infinite linear;
+  }
 }

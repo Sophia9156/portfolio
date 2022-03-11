@@ -43,15 +43,15 @@ changeData();
 
 // 스크롤 시 타이틀 애니메이션
 window.onscroll = () => {
-  if(skillDetail.offsetTop < window.scrollY && skillDetail.offsetTop + window.innerHeight * 0.1 >= window.scrollY){
+  if(skillDetail.offsetTop < window.scrollY && skillDetail.offsetTop + 100 >= window.scrollY){
     skillDetail.style.transform = 'scale(0.4) translate(15rem, -17rem)';
-  } else if (skillDetail.offsetTop + window.innerHeight * 0.1 < window.scrollY && skillDetail.offsetTop + window.innerHeight * 0.2 >= window.scrollY) {
+  } else if (skillDetail.offsetTop + 100  < window.scrollY && skillDetail.offsetTop + 200 >= window.scrollY) {
     skillDetail.style.transform = 'scale(0.5) translate(17rem, -15rem)';
-  } else if (skillDetail.offsetTop + window.innerHeight * 0.2 < window.scrollY && skillDetail.offsetTop + window.innerHeight * 0.4 >= window.scrollY) {
+  } else if (skillDetail.offsetTop + 200 < window.scrollY && skillDetail.offsetTop + 300 >= window.scrollY) {
     skillDetail.style.transform = 'scale(0.7) translate(15rem, -10rem)';
-  } else if (skillDetail.offsetTop + window.innerHeight * 0.4 < window.scrollY && skillDetail.offsetTop + window.innerHeight * 0.5 >= window.scrollY) {
+  } else if (skillDetail.offsetTop + 300 < window.scrollY && skillDetail.offsetTop + 400 >= window.scrollY) {
     skillDetail.style.transform = 'scale(0.9) translate(10rem, -5rem)';
-  } else if (skillDetail.offsetTop + window.innerHeight * 0.5 < window.scrollY) {
+  } else if (skillDetail.offsetTop + 400 < window.scrollY) {
     skillDetail.style.transform = 'scale(1) translate(0, 0)';
   }
 }

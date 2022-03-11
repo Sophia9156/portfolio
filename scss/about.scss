@@ -1,89 +1,7 @@
 @import './common';
 
 
-.pageTitle{
-  position: fixed;
-  left: 0em; top: 47%;
-  font-size: 1em;
-  font-family: $nanum;
-  color: #fff;
-  letter-spacing: 2em;
-  transform: rotate(-90deg);
-}
-
-
-// profile
-.profile{
-  width: 100%;
-  margin: 15rem auto 5rem;
-  text-align: center;
-  .profileImg{
-    width: 20rem;
-    height: 20rem;
-    margin: 0 auto;
-    position: relative;
-    img{
-      width: 100%;
-      position: absolute;
-      left: 0; top: 0;
-      z-index: 3;
-      transform: translateY(30%);
-      opacity: 0;
-      animation: fadein .5s forwards ease-in;
-    }
-    span{
-      width: 20rem;
-      height: 20rem;
-      border-radius: 50%;
-      position: absolute;
-      left: 0; top: 0;
-      opacity: 0;
-    }
-    .circleRed{
-      background-color: $red;
-      animation: blink2 10s infinite linear;
-      animation-delay: 1.5s;
-    }
-    .circleBlue{
-      background-color: $blue;
-      animation: blink1 10s infinite linear;
-      animation-delay: 1s;
-    }
-    .circleYellow{
-      background-color: $yellow;
-      animation: blink1 10s infinite linear;
-      animation-delay: 2.5s;
-    }
-  }
-  .profileName{
-    h3{
-      margin: 3rem auto;
-      font-size: 2rem;
-      font-family: $nanum;
-      color: #fff;
-    }
-    .resume{
-      display: inline-block;
-      margin: 0 auto 1rem;
-      padding: 1rem 1.5rem;
-      background-color: #fff;
-      color: salmon;
-      font-size: 1.2rem;
-      font-family: $nanum;
-      border-radius: 1.5rem;
-    }
-    span{
-      vertical-align: middle;
-    }
-    .scrollDown{
-      margin: 5rem auto;
-      color: #fff;
-      font-family: $nanum;
-      animation: fadein2 5s infinite ease-in-out;
-    }
-  }
-}
-
+// animation
 @keyframes fadein {
   0%{
     transform: translateY(30%);
@@ -245,6 +163,91 @@
 }
 
 
+// title
+.pageTitle{
+  position: fixed;
+  left: 0em; top: 47%;
+  font-size: 1em;
+  font-family: $nanum;
+  color: #fff;
+  letter-spacing: 2em;
+  transform: rotate(-90deg);
+}
+
+
+// profile
+.profile{
+  width: 100%;
+  margin: 15rem auto 5rem;
+  text-align: center;
+  .profileImg{
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto;
+    position: relative;
+    img{
+      width: 100%;
+      position: absolute;
+      left: 0; top: 0;
+      z-index: 3;
+      transform: translateY(30%);
+      opacity: 0;
+      animation: fadein .5s forwards ease-in;
+    }
+    span{
+      width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+      position: absolute;
+      left: 0; top: 0;
+      opacity: 0;
+    }
+    .circleRed{
+      background-color: $red;
+      animation: blink2 10s infinite linear;
+      animation-delay: 1.5s;
+    }
+    .circleBlue{
+      background-color: $blue;
+      animation: blink1 10s infinite linear;
+      animation-delay: 1s;
+    }
+    .circleYellow{
+      background-color: $yellow;
+      animation: blink1 10s infinite linear;
+      animation-delay: 2.5s;
+    }
+  }
+  .profileName{
+    h3{
+      margin: 3rem auto;
+      font-size: 2rem;
+      font-family: $nanum;
+      color: #fff;
+    }
+    .resume{
+      display: inline-block;
+      margin: 0 auto 1rem;
+      padding: 1rem 1.5rem;
+      background-color: #fff;
+      color: salmon;
+      font-size: 1.2rem;
+      font-family: $nanum;
+      border-radius: 1.5rem;
+    }
+    span{
+      vertical-align: middle;
+    }
+    .scrollDown{
+      margin: 5rem auto;
+      color: #fff;
+      font-family: $nanum;
+      animation: fadein2 5s infinite ease-in-out;
+    }
+  }
+}
+
+
 // skills
 .skillsWrap{
   width: 100%;
@@ -290,4 +293,166 @@
       color: #fff;
     }
   }
+}
+
+
+
+/* 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+// title
+.pageTitle{
+  left: -1em; top: 47%;
+}
+
+
+// profile
+.profile{
+  .profileImg{
+    width: 15rem;
+    height: 15rem;
+    span{
+      width: 15rem;
+      height: 15rem;
+    }
+  }
+  .profileName{
+    h3{
+      margin: 5rem auto 3rem;
+    }
+  }
+}
+
+
+// skills
+.skillsWrap{
+  .skillContainer{
+    flex-wrap: wrap;
+    li{
+      width: 15%;
+      margin: 10px;
+    }
+  }
+  .skills-detail{
+    margin: 7rem auto 3rem;
+    font-size: 1.2rem;
+    li{
+      line-height: 3rem;
+    }
+  }
+}
+}
+
+
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/ 
+@media all and (min-width:480px) and (max-width:767px) {
+// title
+.pageTitle{
+  left: -3em; top: 47%;
+  font-size: 0.9em;
+}
+
+
+// profile
+.profile{
+  .profileImg{
+    width: 10rem;
+    height: 10rem;
+    span{
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+  .profileName{
+    h3{
+      margin: 5rem auto 3rem;
+      font-size: 1.5rem;
+    }
+    .resume{
+      padding: 0.9rem 1.2rem;
+      font-size: 1.1rem;
+      border-radius: 1.5rem;
+    }
+    .scrollDown{
+      margin: 3rem auto;
+
+    }
+  }
+}
+
+
+// skills
+.skillsWrap{
+  .skillContainer{
+    flex-wrap: wrap;
+    li{
+      width: 15%;
+      margin: 10px;
+    }
+  }
+  .skills-detail{
+    width: 20rem;
+    height: 20rem;
+    margin: 5rem auto;
+    font-size: 0.8rem;
+    li{
+      line-height: 1.5rem;
+    }
+  }
+}
+}
+
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/ 
+@media all and (max-width:479px) {
+// title
+.pageTitle{
+  left: -3em; top: 25%;
+  font-size: 0.9em;
+}
+
+
+// profile
+.profile{
+  .profileImg{
+    width: 10rem;
+    height: 10rem;
+    span{
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+  .profileName{
+    h3{
+      margin: 5rem auto 3rem;
+      font-size: 1.5rem;
+    }
+    .resume{
+      padding: 0.7rem 1rem;
+    }
+    .scrollDown{
+      margin: 3rem auto 5rem;
+    }
+  }
+}
+
+
+// skills
+.skillsWrap{
+  .skillContainer{
+    flex-wrap: wrap;
+    li{
+      width: 15%;
+      margin: 10px;
+    }
+  }
+  .skills-detail{
+    width: 20rem;
+    height: 20rem;
+    margin: 5rem auto;
+    font-size: 0.8rem;
+    li{
+      line-height: 1.5rem;
+    }
+  }
+}
 }

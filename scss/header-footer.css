@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Barriecito&family=Nanum+Gothic:wght@400;700;800&family=Noto+Serif+KR:wght@400;700&display=swap");
 body {
   margin: 0 auto;
@@ -32,6 +33,164 @@ table {
 
 .material-icons-outlined {
   font-family: 'Material Icons';
+}
+
+@-webkit-keyframes parrot {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  5% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  10% {
+    -webkit-transform: translate(0.1em, -0.2em) rotate(20deg);
+            transform: translate(0.1em, -0.2em) rotate(20deg);
+  }
+  15% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  45% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, -0.1em) rotate(360deg);
+            transform: translate(0, -0.1em) rotate(360deg);
+  }
+  55% {
+    -webkit-transform: translate(0, 0) rotate(360deg);
+            transform: translate(0, 0) rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(360deg);
+            transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes parrot {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  5% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  10% {
+    -webkit-transform: translate(0.1em, -0.2em) rotate(20deg);
+            transform: translate(0.1em, -0.2em) rotate(20deg);
+  }
+  15% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  45% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, -0.1em) rotate(360deg);
+            transform: translate(0, -0.1em) rotate(360deg);
+  }
+  55% {
+    -webkit-transform: translate(0, 0) rotate(360deg);
+            transform: translate(0, 0) rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(360deg);
+            transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes menuPop {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  10% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  20% {
+    -webkit-transform: translateY(-2em) rotate(-20deg);
+            transform: translateY(-2em) rotate(-20deg);
+  }
+  50% {
+    -webkit-transform: translateY(0) rotate(0);
+            transform: translateY(0) rotate(0);
+  }
+  100% {
+  }
+}
+
+@keyframes menuPop {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  10% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  20% {
+    -webkit-transform: translateY(-2em) rotate(-20deg);
+            transform: translateY(-2em) rotate(-20deg);
+  }
+  50% {
+    -webkit-transform: translateY(0) rotate(0);
+            transform: translateY(0) rotate(0);
+  }
+  100% {
+  }
+}
+
+@-webkit-keyframes circlemove {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  25% {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+  }
+  50% {
+    -webkit-transform: translate(150%, 150%);
+            transform: translate(150%, 150%);
+  }
+  75% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes circlemove {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  25% {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+  }
+  50% {
+    -webkit-transform: translate(150%, 150%);
+            transform: translate(150%, 150%);
+  }
+  75% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
 }
 
 .header {
@@ -142,76 +301,6 @@ table {
           transform: translateY(-0.8em) rotate(-45deg);
 }
 
-@-webkit-keyframes parrot {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  5% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  10% {
-    -webkit-transform: translate(0.1em, -0.2em) rotate(20deg);
-            transform: translate(0.1em, -0.2em) rotate(20deg);
-  }
-  15% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  45% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  50% {
-    -webkit-transform: translate(0, -0.1em) rotate(360deg);
-            transform: translate(0, -0.1em) rotate(360deg);
-  }
-  55% {
-    -webkit-transform: translate(0, 0) rotate(360deg);
-            transform: translate(0, 0) rotate(360deg);
-  }
-  100% {
-    -webkit-transform: translate(0, 0) rotate(360deg);
-            transform: translate(0, 0) rotate(360deg);
-  }
-}
-
-@keyframes parrot {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  5% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  10% {
-    -webkit-transform: translate(0.1em, -0.2em) rotate(20deg);
-            transform: translate(0.1em, -0.2em) rotate(20deg);
-  }
-  15% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  45% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  50% {
-    -webkit-transform: translate(0, -0.1em) rotate(360deg);
-            transform: translate(0, -0.1em) rotate(360deg);
-  }
-  55% {
-    -webkit-transform: translate(0, 0) rotate(360deg);
-            transform: translate(0, 0) rotate(360deg);
-  }
-  100% {
-    -webkit-transform: translate(0, 0) rotate(360deg);
-            transform: translate(0, 0) rotate(360deg);
-  }
-}
-
 .mainMenu {
   width: 100vw;
   height: 100vh;
@@ -238,6 +327,7 @@ table {
           align-items: center;
   text-align: center;
   font-family: "Barriecito", cursive;
+  overflow: auto;
 }
 
 .mainMenu .mainMenuTop {
@@ -342,48 +432,6 @@ table {
   border: 2px solid #fff;
 }
 
-@-webkit-keyframes menuPop {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  10% {
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-  }
-  20% {
-    -webkit-transform: translateY(-2em) rotate(-20deg);
-            transform: translateY(-2em) rotate(-20deg);
-  }
-  50% {
-    -webkit-transform: translateY(0) rotate(0);
-            transform: translateY(0) rotate(0);
-  }
-  100% {
-  }
-}
-
-@keyframes menuPop {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  10% {
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-  }
-  20% {
-    -webkit-transform: translateY(-2em) rotate(-20deg);
-            transform: translateY(-2em) rotate(-20deg);
-  }
-  50% {
-    -webkit-transform: translateY(0) rotate(0);
-            transform: translateY(0) rotate(0);
-  }
-  100% {
-  }
-}
-
 .cursor {
   width: 1.5em;
   height: 1.5em;
@@ -451,6 +499,7 @@ table {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  pointer-events: all;
 }
 
 .contactWrap .contact .contactBox {
@@ -463,6 +512,7 @@ table {
           transform: translateY(50%);
   -webkit-transition: .5s;
   transition: .5s;
+  pointer-events: none;
 }
 
 .contactWrap .contact .contactBox li {
@@ -543,49 +593,196 @@ table {
           animation-delay: -1.5s;
 }
 
-@-webkit-keyframes circlemove {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+/* 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .header .language {
+    right: 15%;
   }
-  25% {
-    -webkit-transform: translateX(150%);
-            transform: translateX(150%);
+  .cursor {
+    opacity: 0;
   }
-  50% {
-    -webkit-transform: translate(150%, 150%);
-            transform: translate(150%, 150%);
+  .cursor.active {
+    opacity: 0;
   }
-  75% {
-    -webkit-transform: translateY(150%);
-            transform: translateY(150%);
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+  .cursor.fadeout {
+    opacity: 0;
   }
 }
 
-@keyframes circlemove {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .header h1 img {
+    width: 2em;
   }
-  25% {
-    -webkit-transform: translateX(150%);
-            transform: translateX(150%);
+  .header .language {
+    right: 15%;
+    top: 2.7rem;
   }
-  50% {
-    -webkit-transform: translate(150%, 150%);
-            transform: translate(150%, 150%);
+  .header .language span {
+    font-size: 1em;
   }
-  75% {
-    -webkit-transform: translateY(150%);
-            transform: translateY(150%);
+  .header .language i {
+    height: 15px;
   }
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+  .header .burger {
+    width: 2em;
+    right: 5%;
+    top: 2.5rem;
+  }
+  .header .burger span {
+    height: 3px;
+    margin: 0.4em 0;
+  }
+  .header .burger.active span:nth-of-type(1) {
+    -webkit-transform: translateY(0.55em) rotate(45deg);
+            transform: translateY(0.55em) rotate(45deg);
+  }
+  .header .burger.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-0.6em) rotate(-45deg);
+            transform: translateY(-0.6em) rotate(-45deg);
+  }
+  .mainMenu .mainMenuTop a {
+    font-size: 4em;
+  }
+  .mainMenu .mainMenuBottom a {
+    font-size: 1.5em;
+  }
+  .subMenu {
+    width: 4em;
+    left: calc(50% - 2em);
+    top: 3em;
+  }
+  .subMenu a {
+    padding: 0.3em 0.7em;
+    font-size: 0.9em;
+  }
+  .subMenu.active {
+    -webkit-transform: translateY(4em);
+            transform: translateY(4em);
+  }
+  .cursor {
+    opacity: 0;
+  }
+  .cursor.active {
+    opacity: 0;
+  }
+  .cursor.fadeout {
+    opacity: 0;
+  }
+  .goToTop {
+    right: 5%;
+    bottom: 2rem;
+    font-size: 2em;
+    padding: 1rem;
+  }
+  .contactWrap {
+    left: 5%;
+    bottom: 2.5rem;
+  }
+  .contactWrap .contact span {
+    font-size: 2em;
+    padding: 1rem;
+  }
+  .contactWrap .contact .contactBox {
+    bottom: 3rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+  }
+  .contactWrap .contact .contactBox li {
+    margin: 0.5em 0;
+    font-size: 0.8em;
+  }
+  .footer p {
+    font-size: 0.9rem;
+  }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+@media all and (max-width: 479px) {
+  .header {
+    padding: 1em 0 0;
+  }
+  .header h1 img {
+    width: 2em;
+  }
+  .header .language {
+    left: 5%;
+    top: 2rem;
+  }
+  .header .language span {
+    font-size: 1em;
+  }
+  .header .language i {
+    height: 15px;
+  }
+  .header .burger {
+    width: 2.5em;
+    right: 5%;
+    top: 1.5rem;
+  }
+  .header .burger span {
+    height: 3px;
+    margin: 0.5em 0;
+  }
+  .header .burger.active span:nth-of-type(1) {
+    -webkit-transform: translateY(0.65em) rotate(45deg);
+            transform: translateY(0.65em) rotate(45deg);
+  }
+  .header .burger.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-0.7em) rotate(-45deg);
+            transform: translateY(-0.7em) rotate(-45deg);
+  }
+  .mainMenu .mainMenuTop a {
+    font-size: 3em;
+  }
+  .mainMenu .mainMenuBottom a {
+    font-size: 1.5em;
+  }
+  .subMenu {
+    width: 4em;
+    left: calc(50% - 2em);
+    top: 4em;
+  }
+  .subMenu a {
+    padding: 0.3em 0.7em;
+    font-size: 0.9em;
+    margin: 0 10px;
+  }
+  .subMenu.active {
+    -webkit-transform: translateY(2em);
+            transform: translateY(2em);
+  }
+  .cursor {
+    opacity: 0;
+  }
+  .cursor.active {
+    opacity: 0;
+  }
+  .goToTop {
+    right: 5%;
+    bottom: 2rem;
+    padding: 0.5rem;
+    font-size: 2em;
+  }
+  .contactWrap {
+    left: 5%;
+    bottom: 7rem;
+  }
+  .contactWrap .contact span {
+    padding: 0.5rem;
+    font-size: 2em;
+  }
+  .contactWrap .contact .contactBox {
+    bottom: 3rem;
+    padding: 0.5rem;
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+  }
+  .contactWrap .contact .contactBox li {
+    font-size: 0.9em;
   }
 }
 /*# sourceMappingURL=header-footer.css.map */

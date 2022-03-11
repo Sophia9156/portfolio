@@ -1,6 +1,31 @@
 @import './common';
 // 첫 페이지 애니메이션
 
+
+// animation
+@keyframes fade {
+  0%{opacity: 0;}
+  10%{opacity: 1;}
+  90%{opacity: 1;}
+  100%{opacity: 0;}
+}
+
+@keyframes wave {
+  0%{transform: translate(0, 0) rotate(0);}
+  10%{transform: scale(100%) translate(-10vw, -10vw) rotate(10deg);}
+  20%{transform: scale(80%) translate(-20vw, -20vw) rotate(30deg);}
+  30%{transform: scale(100%) translate(0, 0) rotate(10deg);}
+  40%{transform: scale(80%) translate(10vw, 10vw) rotate(-10deg);}
+  50%{transform: translate(15vw, 15vw) rotate(-30deg);}
+  60%{transform: translate(0vw, 0vw) rotate(-60deg);}
+  70%{transform: translate(-10vw, -10vw) rotate(-50deg);}
+  80%{transform: translate(0, 0) rotate(0);}
+  85%{transform: translate(0, 0) scale(100%);}
+  100%{transform: translate(0, -40vh) scale(0);}
+}
+
+
+// intro
 .intro{
   width: 100%;
   height: 100vh;
@@ -45,23 +70,33 @@
   .sq4{animation-delay: 6s;}
 }
 
-@keyframes fade {
-  0%{opacity: 0;}
-  10%{opacity: 1;}
-  90%{opacity: 1;}
-  100%{opacity: 0;}
+
+
+/* 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {  
+  .box{
+    .text{
+      font-size: 2em;
+    }
+  }
 }
 
-@keyframes wave {
-  0%{transform: translate(0, 0) rotate(0);}
-  10%{transform: scale(100%) translate(-10vw, -10vw) rotate(10deg);}
-  20%{transform: scale(80%) translate(-20vw, -20vw) rotate(30deg);}
-  30%{transform: scale(100%) translate(0, 0) rotate(10deg);}
-  40%{transform: scale(80%) translate(10vw, 10vw) rotate(-10deg);}
-  50%{transform: translate(15vw, 15vw) rotate(-30deg);}
-  60%{transform: translate(0vw, 0vw) rotate(-60deg);}
-  70%{transform: translate(-10vw, -10vw) rotate(-50deg);}
-  80%{transform: translate(0, 0) rotate(0);}
-  85%{transform: translate(0, 0) scale(100%);}
-  100%{transform: translate(0, -40vh) scale(0);}
+
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/ 
+@media all and (min-width:480px) and (max-width:767px) {
+  .box{
+    .text{
+      font-size: 1.5em;
+    }
+  }
+}
+
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/ 
+@media all and (max-width:479px) {
+  .box{
+    .text{
+      font-size: 1em;
+    }
+  }
 }

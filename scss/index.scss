@@ -120,3 +120,107 @@
   transform: rotate(-90deg);
   color: #fff;
 }
+
+
+
+/* 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+.animationTextWrap{
+  p{
+    font-size: 5em;
+  }
+}
+.textWrap{
+  h2{
+    color: salmon;
+    font-size: 5em;
+  }
+}
+
+.clockWrap{
+  padding: 1.5em 0;
+  .calendar{
+    .day1{
+      font-size: 1em;
+    }
+  }
+}
+
+.title{
+  left: -1em; top: 45%;
+}
+}
+
+
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/ 
+@media all and (min-width:480px) and (max-width:767px) {
+.animationTextWrap{
+  p{
+    font-size: 4em;
+  }
+}
+.textWrap{
+  h2{
+    color: salmon;
+    font-size: 3.5em;
+  }
+}
+
+.clockWrap{
+  padding: 1.5em 0;
+  right: 2em;
+  .calendar{
+    .day1{
+      font-size: 0.8em;
+    }
+    .day2{
+      font-size: 0.7em;
+    }
+  }
+  .clock{
+    font-size: 1.2em;
+  }
+}
+
+.title{
+  left: -4em; top: 47%;
+  font-size: 0.9em;
+}
+}
+
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/ 
+@media all and (max-width:479px) {
+.animationTextWrap{
+  p{
+    font-size: 3em;
+  }
+}
+.textWrap{
+  h2{
+    color: salmon;
+    font-size: 3em;
+  }
+}
+
+.clockWrap{
+  padding: 1.5em 0;
+  right: 2em; bottom : 1em;
+  .calendar{
+    .day1{
+      font-size: 0.8em;
+    }
+    .day2{
+      font-size: 0.7em;
+    }
+  }
+  .clock{
+    font-size: 1.2em;
+  }
+}
+
+.title{
+  left: -3em; top: 25%;
+  font-size: 0.9em;
+}
+}

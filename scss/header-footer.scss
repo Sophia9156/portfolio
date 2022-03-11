@@ -1,6 +1,35 @@
 @import './common';
 
 
+// animation
+@keyframes parrot {
+  0%{transform: translate(0, 0);}
+  5%{transform: translate(0, 0);}
+  10%{transform: translate(0.1em, -0.2em) rotate(20deg);}
+  15%{transform: translate(0,0);}
+  45%{transform: translate(0,0);}
+  50%{transform: translate(0, -0.1em) rotate(360deg);}
+  55%{transform: translate(0,0) rotate(360deg);}
+  100%{transform: translate(0,0) rotate(360deg);}
+}
+
+@keyframes menuPop {
+  0%{transform: rotate(0);}
+  10%{transform: rotate(-20deg);}
+  20%{transform: translateY(-2em) rotate(-20deg);}
+  50%{transform: translateY(0) rotate(0);}
+  100%{}
+}
+
+@keyframes circlemove {
+  0%{transform: translate(0,0);}
+  25%{transform: translateX(150%);}
+  50%{transform: translate(150%, 150%);}
+  75%{transform: translateY(150%);}
+  100%{transform: translate(0,0);}
+}
+
+
 // header
 .header{
   width: 100%;
@@ -78,17 +107,6 @@
   }
 }
 
-@keyframes parrot {
-  0%{transform: translate(0, 0);}
-  5%{transform: translate(0, 0);}
-  10%{transform: translate(0.1em, -0.2em) rotate(20deg);}
-  15%{transform: translate(0,0);}
-  45%{transform: translate(0,0);}
-  50%{transform: translate(0, -0.1em) rotate(360deg);}
-  55%{transform: translate(0,0) rotate(360deg);}
-  100%{transform: translate(0,0) rotate(360deg);}
-}
-
 .mainMenu{
   width: 100vw;
   height: 100vh;
@@ -103,6 +121,7 @@
   align-items: center;
   text-align: center;
   font-family: $menu;
+  overflow: auto;
   .mainMenuTop{
     padding: 5vh 0 10vh;
     a{
@@ -167,7 +186,6 @@
   transform: translateY(7em);
   a{
     animation: menuPop 1s forwards linear;
-    
     &:nth-of-type(1) {animation-delay: 0.5s;}
     &:nth-of-type(2) {animation-delay: 0.6s;}
     &:hover{
@@ -176,14 +194,6 @@
       border: 2px solid #fff;
     }
   }
-}
-
-@keyframes menuPop {
-  0%{transform: rotate(0);}
-  10%{transform: rotate(-20deg);}
-  20%{transform: translateY(-2em) rotate(-20deg);}
-  50%{transform: translateY(0) rotate(0);}
-  100%{}
 }
 
 
@@ -243,6 +253,7 @@
     .contactBox.active{
       opacity: 1;
       transform: translateY(0);
+      pointer-events: all;
     }
     .contactBox{
       position: absolute;
@@ -251,6 +262,7 @@
       opacity: 0;
       transform: translateY(50%);
       transition: .5s;
+      pointer-events: none;
       li{
         margin: 1em 0;
         font-size: 1em;
@@ -319,10 +331,242 @@
   }
 }
 
-@keyframes circlemove {
-  0%{transform: translate(0,0);}
-  25%{transform: translateX(150%);}
-  50%{transform: translate(150%, 150%);}
-  75%{transform: translateY(150%);}
-  100%{transform: translate(0,0);}
+
+
+/* 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+// header
+.header{
+  .language{
+    right: 15%;
+  }
+}
+
+// cursor
+.cursor{
+  opacity: 0;
+}
+.cursor.active{
+  opacity: 0;
+}
+.cursor.fadeout{
+  opacity: 0;
+}
+}
+
+
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/ 
+@media all and (min-width:480px) and (max-width:767px) {
+// header
+.header{
+  h1{
+    img{
+      width: 2em;
+    }
+  }
+  .language{
+    right: 15%; top: 2.7rem;
+    span{
+      font-size: 1em;
+    }
+    i{
+      height: 15px;
+    }
+  }
+  .burger{
+    width: 2em;
+    right: 5%; top: 2.5rem;
+    span{
+      height: 3px;
+      margin: 0.4em 0;
+    }
+  }
+  .burger.active{
+    span:nth-of-type(1){
+      transform: translateY(0.55em) rotate(45deg);
+    }
+    span:nth-of-type(3){
+      transform: translateY(-0.6em) rotate(-45deg);
+    }
+  }
+}
+
+.mainMenu{
+  .mainMenuTop{
+    a{
+      font-size: 4em;
+    }
+  }
+  .mainMenuBottom{
+    a{
+      font-size: 1.5em;
+    }
+  }
+}
+
+.subMenu{
+  width: 4em;
+  left: calc(50% - 2em); top: 3em;
+  a{
+    padding: 0.3em 0.7em;
+    font-size: 0.9em;
+  }
+}
+.subMenu.active{
+  transform: translateY(4em);
+}
+
+
+// cursor
+.cursor{
+  opacity: 0;
+}
+.cursor.active{
+  opacity: 0;
+}
+.cursor.fadeout{
+  opacity: 0;
+}
+
+
+// goToTop
+.goToTop{
+  right: 5%; bottom: 2rem;
+  font-size: 2em;
+  padding: 1rem;
+}
+
+
+// contact
+.contactWrap{
+  left: 5%; bottom: 2.5rem;
+  .contact{
+    span{
+      font-size: 2em;
+      padding: 1rem;
+    }
+    .contactBox{
+      bottom: 3rem;
+      padding: 1rem;
+      background-color: rgba(#000, 0.3);
+      border-radius: 1rem;
+      li{
+        margin: 0.5em 0;
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+
+// footer
+.footer{
+  p{
+    font-size: 0.9rem;
+  }
+}
+}
+
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/ 
+@media all and (max-width:479px) {
+// header
+.header{
+  padding: 1em 0 0;
+  h1{
+    img{
+      width: 2em;
+    }
+  }
+  .language{
+    left: 5%; top: 2rem;
+    span{
+      font-size: 1em;
+    }
+    i{
+      height: 15px;
+    }
+  }
+  .burger{
+    width: 2.5em;
+    right: 5%; top: 1.5rem;
+    span{
+      height: 3px;
+      margin: 0.5em 0;
+    }
+  }
+  .burger.active{
+    span:nth-of-type(1){
+      transform: translateY(0.65em) rotate(45deg);
+    }
+    span:nth-of-type(3){
+      transform: translateY(-0.7em) rotate(-45deg);
+    }
+  }
+}
+
+.mainMenu{
+  .mainMenuTop{
+    a{
+      font-size: 3em;
+    }
+  }
+  .mainMenuBottom{
+    a{
+      font-size: 1.5em;
+    }
+  }
+}
+
+.subMenu{
+  width: 4em;
+  left: calc(50% - 2em); top: 4em;
+  a{
+    padding: 0.3em 0.7em;
+    font-size: 0.9em;
+    margin: 0 10px;
+  }
+}
+.subMenu.active{
+  transform: translateY(2em);
+}
+
+
+// cursor
+.cursor{
+  opacity: 0;
+}
+.cursor.active{
+  opacity: 0;
+}
+
+
+// goToTop
+.goToTop{
+  right: 5%; bottom: 2rem;
+  padding: 0.5rem;
+  font-size: 2em;
+}
+
+
+// contact
+.contactWrap{
+  left: 5%; bottom: 7rem;
+  .contact{
+    span{
+      padding: 0.5rem;
+      font-size: 2em;
+    }
+    .contactBox{
+      bottom: 3rem;
+      padding: 0.5rem;
+      transform: translateY(30%);
+      background-color: rgba(#000, 0.3);
+      border-radius: 1rem;
+      li{
+        font-size: 0.9em;
+      }
+    }
+  }
+}
 }

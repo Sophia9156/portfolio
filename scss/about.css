@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Barriecito&family=Nanum+Gothic:wght@400;700;800&family=Noto+Serif+KR:wght@400;700&display=swap");
 body {
   margin: 0 auto;
@@ -32,108 +33,6 @@ table {
 
 .material-icons-outlined {
   font-family: 'Material Icons';
-}
-
-.pageTitle {
-  position: fixed;
-  left: 0em;
-  top: 47%;
-  font-size: 1em;
-  font-family: "Nanum Gothic", sans-serif;
-  color: #fff;
-  letter-spacing: 2em;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-.profile {
-  width: 100%;
-  margin: 15rem auto 5rem;
-  text-align: center;
-}
-
-.profile .profileImg {
-  width: 20rem;
-  height: 20rem;
-  margin: 0 auto;
-  position: relative;
-}
-
-.profile .profileImg img {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 3;
-  -webkit-transform: translateY(30%);
-          transform: translateY(30%);
-  opacity: 0;
-  -webkit-animation: fadein .5s forwards ease-in;
-          animation: fadein .5s forwards ease-in;
-}
-
-.profile .profileImg span {
-  width: 20rem;
-  height: 20rem;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-}
-
-.profile .profileImg .circleRed {
-  background-color: #fd1d1d;
-  -webkit-animation: blink2 10s infinite linear;
-          animation: blink2 10s infinite linear;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-}
-
-.profile .profileImg .circleBlue {
-  background-color: #3a4bb4;
-  -webkit-animation: blink1 10s infinite linear;
-          animation: blink1 10s infinite linear;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.profile .profileImg .circleYellow {
-  background-color: #fcb045;
-  -webkit-animation: blink1 10s infinite linear;
-          animation: blink1 10s infinite linear;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
-}
-
-.profile .profileName h3 {
-  margin: 3rem auto;
-  font-size: 2rem;
-  font-family: "Nanum Gothic", sans-serif;
-  color: #fff;
-}
-
-.profile .profileName .resume {
-  display: inline-block;
-  margin: 0 auto 1rem;
-  padding: 1rem 1.5rem;
-  background-color: #fff;
-  color: salmon;
-  font-size: 1.2rem;
-  font-family: "Nanum Gothic", sans-serif;
-  border-radius: 1.5rem;
-}
-
-.profile .profileName span {
-  vertical-align: middle;
-}
-
-.profile .profileName .scrollDown {
-  margin: 5rem auto;
-  color: #fff;
-  font-family: "Nanum Gothic", sans-serif;
-  -webkit-animation: fadein2 5s infinite ease-in-out;
-          animation: fadein2 5s infinite ease-in-out;
 }
 
 @-webkit-keyframes fadein {
@@ -562,6 +461,108 @@ table {
   }
 }
 
+.pageTitle {
+  position: fixed;
+  left: 0em;
+  top: 47%;
+  font-size: 1em;
+  font-family: "Nanum Gothic", sans-serif;
+  color: #fff;
+  letter-spacing: 2em;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.profile {
+  width: 100%;
+  margin: 15rem auto 5rem;
+  text-align: center;
+}
+
+.profile .profileImg {
+  width: 20rem;
+  height: 20rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.profile .profileImg img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  -webkit-transform: translateY(30%);
+          transform: translateY(30%);
+  opacity: 0;
+  -webkit-animation: fadein .5s forwards ease-in;
+          animation: fadein .5s forwards ease-in;
+}
+
+.profile .profileImg span {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.profile .profileImg .circleRed {
+  background-color: #fd1d1d;
+  -webkit-animation: blink2 10s infinite linear;
+          animation: blink2 10s infinite linear;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.profile .profileImg .circleBlue {
+  background-color: #3a4bb4;
+  -webkit-animation: blink1 10s infinite linear;
+          animation: blink1 10s infinite linear;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.profile .profileImg .circleYellow {
+  background-color: #fcb045;
+  -webkit-animation: blink1 10s infinite linear;
+          animation: blink1 10s infinite linear;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.profile .profileName h3 {
+  margin: 3rem auto;
+  font-size: 2rem;
+  font-family: "Nanum Gothic", sans-serif;
+  color: #fff;
+}
+
+.profile .profileName .resume {
+  display: inline-block;
+  margin: 0 auto 1rem;
+  padding: 1rem 1.5rem;
+  background-color: #fff;
+  color: salmon;
+  font-size: 1.2rem;
+  font-family: "Nanum Gothic", sans-serif;
+  border-radius: 1.5rem;
+}
+
+.profile .profileName span {
+  vertical-align: middle;
+}
+
+.profile .profileName .scrollDown {
+  margin: 5rem auto;
+  color: #fff;
+  font-family: "Nanum Gothic", sans-serif;
+  -webkit-animation: fadein2 5s infinite ease-in-out;
+          animation: fadein2 5s infinite ease-in-out;
+}
+
 .skillsWrap {
   width: 100%;
   margin: 5rem auto;
@@ -626,5 +627,129 @@ table {
   line-height: 2rem;
   text-align: center;
   color: #fff;
+}
+
+/* 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .pageTitle {
+    left: -1em;
+    top: 47%;
+  }
+  .profile .profileImg {
+    width: 15rem;
+    height: 15rem;
+  }
+  .profile .profileImg span {
+    width: 15rem;
+    height: 15rem;
+  }
+  .profile .profileName h3 {
+    margin: 5rem auto 3rem;
+  }
+  .skillsWrap .skillContainer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .skillsWrap .skillContainer li {
+    width: 15%;
+    margin: 10px;
+  }
+  .skillsWrap .skills-detail {
+    margin: 7rem auto 3rem;
+    font-size: 1.2rem;
+  }
+  .skillsWrap .skills-detail li {
+    line-height: 3rem;
+  }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .pageTitle {
+    left: -3em;
+    top: 47%;
+    font-size: 0.9em;
+  }
+  .profile .profileImg {
+    width: 10rem;
+    height: 10rem;
+  }
+  .profile .profileImg span {
+    width: 10rem;
+    height: 10rem;
+  }
+  .profile .profileName h3 {
+    margin: 5rem auto 3rem;
+    font-size: 1.5rem;
+  }
+  .profile .profileName .resume {
+    padding: 0.9rem 1.2rem;
+    font-size: 1.1rem;
+    border-radius: 1.5rem;
+  }
+  .profile .profileName .scrollDown {
+    margin: 3rem auto;
+  }
+  .skillsWrap .skillContainer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .skillsWrap .skillContainer li {
+    width: 15%;
+    margin: 10px;
+  }
+  .skillsWrap .skills-detail {
+    width: 20rem;
+    height: 20rem;
+    margin: 5rem auto;
+    font-size: 0.8rem;
+  }
+  .skillsWrap .skills-detail li {
+    line-height: 1.5rem;
+  }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+@media all and (max-width: 479px) {
+  .pageTitle {
+    left: -3em;
+    top: 25%;
+    font-size: 0.9em;
+  }
+  .profile .profileImg {
+    width: 10rem;
+    height: 10rem;
+  }
+  .profile .profileImg span {
+    width: 10rem;
+    height: 10rem;
+  }
+  .profile .profileName h3 {
+    margin: 5rem auto 3rem;
+    font-size: 1.5rem;
+  }
+  .profile .profileName .resume {
+    padding: 0.7rem 1rem;
+  }
+  .profile .profileName .scrollDown {
+    margin: 3rem auto 5rem;
+  }
+  .skillsWrap .skillContainer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .skillsWrap .skillContainer li {
+    width: 15%;
+    margin: 10px;
+  }
+  .skillsWrap .skills-detail {
+    width: 20rem;
+    height: 20rem;
+    margin: 5rem auto;
+    font-size: 0.8rem;
+  }
+  .skillsWrap .skills-detail li {
+    line-height: 1.5rem;
+  }
 }
 /*# sourceMappingURL=about.css.map */
