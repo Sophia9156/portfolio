@@ -265,6 +265,9 @@ table {
     right: 2em;
     bottom: 1em;
   }
+  .clockWrap .calendar {
+    width: 100%;
+  }
   .clockWrap .calendar .day1 {
     font-size: 0.7em;
   }
