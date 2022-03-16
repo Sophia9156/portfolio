@@ -1,3 +1,14 @@
+// Scroll Down
+const scrollDown = document.querySelector('.scrollDown')
+const skillsWrap = document.querySelector('.skillsWrap')
+scrollDown.addEventListener('click', () => {
+  window.scrollTo({
+    top: skillsWrap.offsetTop + 200,
+    behavior: "smooth"
+  })
+})
+
+// Skill 데이터
 const skillContainer = document.querySelector('.skillContainer');
 const skillDetail = document.querySelector('.skills-detail');
 let list = '';
