@@ -461,6 +461,128 @@ table {
   }
 }
 
+@-webkit-keyframes titleAnimation {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  40% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  50% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+  }
+  100% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  40% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  50% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+  }
+  100% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+  }
+}
+
+@-webkit-keyframes text {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  33% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  66% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+}
+
+@keyframes text {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  33% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  66% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+}
+
 .pageTitle {
   position: fixed;
   left: 0em;
@@ -477,6 +599,7 @@ table {
   width: 100%;
   margin: 15rem auto 5rem;
   text-align: center;
+  overflow: hidden;
 }
 
 .profile .profileImg {
@@ -561,6 +684,7 @@ table {
   font-family: "Nanum Gothic", sans-serif;
   -webkit-animation: fadein2 5s infinite ease-in-out;
           animation: fadein2 5s infinite ease-in-out;
+  cursor: pointer;
 }
 
 .skillsWrap {
@@ -629,6 +753,140 @@ table {
   color: #fff;
 }
 
+.introduction {
+  width: 100%;
+  height: 35rem;
+  position: relative;
+  margin: 15rem auto 10rem;
+}
+
+.introduction .title {
+  position: absolute;
+  left: 20%;
+  top: 0;
+}
+
+.introduction .title span {
+  display: block;
+  margin-bottom: 20px;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  opacity: 0;
+  -webkit-animation: titleAnimation 10s infinite ease;
+          animation: titleAnimation 10s infinite ease;
+}
+
+.introduction .title.title1 span {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.introduction .title.title1 span:first-child {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.introduction .title.title1 span:last-child {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.introduction .title.title2 span {
+  -webkit-animation-delay: 5.6s;
+          animation-delay: 5.6s;
+}
+
+.introduction .title.title2 span:first-child {
+  -webkit-animation-delay: 5.4s;
+          animation-delay: 5.4s;
+}
+
+.introduction .title.title2 span:last-child {
+  -webkit-animation-delay: 5.8s;
+          animation-delay: 5.8s;
+}
+
+.introduction .category {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow: hidden;
+}
+
+.introduction .category p {
+  width: 100%;
+  font-size: 2rem;
+  color: #fff;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 700;
+  text-align: right;
+  -webkit-transform: translateX(5%);
+          transform: translateX(5%);
+  -webkit-transition: .7s;
+  transition: .7s;
+  opacity: .3;
+  cursor: pointer;
+}
+
+.introduction .category p.active {
+  -webkit-transform: translateX(-5%);
+          transform: translateX(-5%);
+  opacity: 1;
+}
+
+.introduction .category p:hover {
+  opacity: 1;
+}
+
+.introduction .text {
+  position: absolute;
+  left: 20%;
+  top: 20rem;
+  width: 40%;
+}
+
+.introduction .text p {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 2;
+  text-align: justify;
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.introduction .text p.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
 /* 테블릿 세로 (해상도 768px ~ 1023px)*/
 @media all and (min-width: 768px) and (max-width: 1023px) {
   .pageTitle {
@@ -660,6 +918,26 @@ table {
   }
   .skillsWrap .skills-detail li {
     line-height: 3rem;
+  }
+  .introduction {
+    height: 50rem;
+  }
+  .introduction .title span {
+    font-size: 2rem;
+  }
+  .introduction .category {
+    top: 15rem;
+    height: 30%;
+  }
+  .introduction .category p {
+    font-size: 1.5rem;
+  }
+  .introduction .text {
+    width: 60%;
+    top: 35rem;
+  }
+  .introduction .text p {
+    font-size: 1rem;
   }
 }
 
@@ -707,6 +985,27 @@ table {
   .skillsWrap .skills-detail li {
     line-height: 1.5rem;
   }
+  .introduction {
+    height: 45rem;
+    margin: 10rem auto 5rem;
+  }
+  .introduction .title span {
+    font-size: 1.5rem;
+  }
+  .introduction .category {
+    top: 9rem;
+    height: 30%;
+  }
+  .introduction .category p {
+    font-size: 1rem;
+  }
+  .introduction .text {
+    width: 60%;
+    top: 25rem;
+  }
+  .introduction .text p {
+    font-size: 0.8rem;
+  }
 }
 
 /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
@@ -751,6 +1050,27 @@ table {
   }
   .skillsWrap .skills-detail li {
     line-height: 1.5rem;
+  }
+  .introduction {
+    height: 40rem;
+    margin: 10rem auto 5rem;
+  }
+  .introduction .title span {
+    font-size: 1.2rem;
+  }
+  .introduction .category {
+    top: 9rem;
+    height: 25%;
+  }
+  .introduction .category p {
+    font-size: 1rem;
+  }
+  .introduction .text {
+    width: 60%;
+    top: 23rem;
+  }
+  .introduction .text p {
+    font-size: 0.7rem;
   }
 }
 /*# sourceMappingURL=about.css.map */

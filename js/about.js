@@ -1,16 +1,34 @@
 // Scroll Down
 const scrollDown = document.querySelector('.scrollDown')
-const skillsWrap = document.querySelector('.skillsWrap')
+const introduction = document.querySelector('.introduction')
 scrollDown.addEventListener('click', () => {
   window.scrollTo({
-    top: skillsWrap.offsetTop + 200,
+    top: introduction.offsetTop,
     behavior: "smooth"
   })
 })
 
+// introduction text
+const categories = document.querySelectorAll('.category p')
+const textAll = document.querySelectorAll('.text p')
+
+categories[0].classList.add('active')
+textAll[0].classList.add('active')
+
+categories.forEach((category, index) => {
+  category.onclick = () => {
+    for(let i = 0; i < categories.length; i++){
+      categories[i].classList.remove('active')
+      textAll[i].classList.remove('active')
+    }
+    category.classList.add('active');
+    textAll[index].classList.add('active')
+  }
+})
+
 // Skill 데이터
-const skillContainer = document.querySelector('.skillContainer');
-const skillDetail = document.querySelector('.skills-detail');
+const skillContainer = document.querySelector('.skillContainer')
+const skillDetail = document.querySelector('.skills-detail')
 let list = '';
 let detail = '';
 
@@ -54,15 +72,15 @@ changeData();
 
 // 스크롤 시 타이틀 애니메이션
 window.onscroll = () => {
-  if(skillDetail.offsetTop < window.scrollY && skillDetail.offsetTop + 100 >= window.scrollY){
+  if(skillDetail.offsetTop + 1000 < window.scrollY && skillDetail.offsetTop + 1050 >= window.scrollY){
     skillDetail.style.transform = 'scale(0.4) translate(15rem, -17rem)';
-  } else if (skillDetail.offsetTop + 100  < window.scrollY && skillDetail.offsetTop + 200 >= window.scrollY) {
+  } else if (skillDetail.offsetTop + 1050  < window.scrollY && skillDetail.offsetTop + 1100 >= window.scrollY) {
     skillDetail.style.transform = 'scale(0.5) translate(17rem, -15rem)';
-  } else if (skillDetail.offsetTop + 200 < window.scrollY && skillDetail.offsetTop + 300 >= window.scrollY) {
+  } else if (skillDetail.offsetTop + 1100 < window.scrollY && skillDetail.offsetTop + 1150 >= window.scrollY) {
     skillDetail.style.transform = 'scale(0.7) translate(15rem, -10rem)';
-  } else if (skillDetail.offsetTop + 300 < window.scrollY && skillDetail.offsetTop + 400 >= window.scrollY) {
+  } else if (skillDetail.offsetTop + 1150 < window.scrollY && skillDetail.offsetTop + 1200 >= window.scrollY) {
     skillDetail.style.transform = 'scale(0.9) translate(10rem, -5rem)';
-  } else if (skillDetail.offsetTop + 400 < window.scrollY) {
+  } else if (skillDetail.offsetTop + 1200 < window.scrollY) {
     skillDetail.style.transform = 'scale(1) translate(0, 0)';
   }
 }
