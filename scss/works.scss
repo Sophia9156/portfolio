@@ -98,6 +98,7 @@
         }
       }
       .tech{
+        height: 3rem;
         margin: 1em 0 0;
         span{
           display: inline-block;
@@ -253,7 +254,7 @@
 }
 
 .description{
-  font-size: 1.3em;
+  font-size: 1.3rem;
 }
 
 .worksListWrap{
@@ -311,7 +312,7 @@
 
 .description{
   width: 60%;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .worksListWrap{
@@ -418,7 +419,7 @@
 .description{
   margin: 10em auto 5em;
   width: 60%;
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 .worksListWrap{
@@ -447,13 +448,13 @@
         margin: 0 0 0;
         font-size: 1.1em;
         .workType{
-          font-size: 0.5rem;
+          font-size: 0.2em;
         }
       }
       .tech{
         margin: 0.5em 0 0;
         span{
-          font-size: 0.5em;
+          font-size: 0.3em;
         }
       }
     }

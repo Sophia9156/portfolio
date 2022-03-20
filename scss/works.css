@@ -178,6 +178,7 @@ table {
 }
 
 .worksListWrap li figcaption .tech {
+  height: 3rem;
   margin: 1em 0 0;
 }
 
@@ -381,7 +382,7 @@ table {
     top: 47%;
   }
   .description {
-    font-size: 1.3em;
+    font-size: 1.3rem;
   }
   .worksListWrap li {
     width: 100%;
@@ -444,7 +445,7 @@ table {
   }
   .description {
     width: 60%;
-    font-size: 1em;
+    font-size: 1rem;
   }
   .worksListWrap {
     width: 70vw;
@@ -557,7 +558,7 @@ table {
   .description {
     margin: 10em auto 5em;
     width: 60%;
-    font-size: 1em;
+    font-size: 0.8em;
   }
   .worksListWrap {
     width: 80vw;
@@ -599,13 +600,13 @@ table {
     font-size: 1.1em;
   }
   .worksListWrap li figcaption h3 .workType {
-    font-size: 0.5rem;
+    font-size: 0.2em;
   }
   .worksListWrap li figcaption .tech {
     margin: 0.5em 0 0;
   }
   .worksListWrap li figcaption .tech span {
-    font-size: 0.5em;
+    font-size: 0.3em;
   }
   .displayWrap .display {
     width: 95%;
