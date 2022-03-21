@@ -47,5 +47,6 @@ main{
     background: $blue;
     background: linear-gradient(-45deg, rgba($blue, 0.5) 40%, rgba($red, 0.5) 50%, rgba($yellow, 0.5) 60%);
     animation: wave2 9s infinite linear;
+    pointer-events: none;
   }
 }

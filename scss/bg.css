@@ -167,6 +167,7 @@ main .bgWrap .bg {
     background: linear-gradient(-45deg, rgba(58, 75, 180, 0.5) 40%, rgba(253, 29, 29, 0.5) 50%, rgba(252, 176, 69, 0.5) 60%);
     -webkit-animation: wave2 9s infinite linear;
             animation: wave2 9s infinite linear;
+    pointer-events: none;
   }
 }
 /*# sourceMappingURL=bg.css.map */

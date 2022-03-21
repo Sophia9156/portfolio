@@ -7,11 +7,33 @@ async function changeData() {
   .then(
     data => {
       let newData = [...data.works.reverse()]
+      makeList();
 
-      newData.forEach(work => {
-        makeList(work.thumb, work.title, work.type, work.tech)
-      });
-      worksList.innerHTML = list;
+      // 선택 옵션
+      const select = document.getElementById('select')
+      select.onchange = () => {
+        switch(select.value) {
+          case 'all': 
+          newData = [...data.works]
+          makeList();
+          showList()
+          break
+          case 'mini-project': 
+          newData = data.works.filter(data => data.type === '개인 프로젝트')
+          makeList();
+          showList()
+          break
+          case 'mini-game': 
+          newData = data.works.filter(data => data.type === '미니 게임')
+          makeList();
+          showList()
+          break
+          default: 
+          newData = [...data.works]
+          makeList();
+          showList()
+        }
+      }
 
       const works = document.querySelectorAll('.worksListWrap li');
 
@@ -25,18 +47,20 @@ async function changeData() {
       const displayGithub = document.querySelector('.goToGithub');
 
       // 리스트 클릭 시 디스플레이 표시
-      works.forEach((work, key) => {
-        work.addEventListener('click', () => {
-          displayThumb.setAttribute('src', data.works[key].thumb);
-          displayTitle.textContent = data.works[key].title;
-          displayPeriod.textContent = data.works[key].period;
-          displayTech.innerHTML = data.works[key].tech.join('');
-          displayDescription.textContent = data.works[key].description;
-          displayPage.setAttribute('href', data.works[key].url);
-          displayGithub.setAttribute('href', data.works[key].github);
-          display.style.display = 'block';
+      $('.worksListWrap').on('click', 'li', (e) => {
+        newData.forEach((data) => {
+          if(data.id === e.currentTarget.dataset.num) {
+            displayThumb.setAttribute('src', data.thumb);
+            displayTitle.textContent = data.title;
+            displayPeriod.textContent = data.period;
+            displayTech.innerHTML = data.tech.join('');
+            displayDescription.textContent = data.description;
+            displayPage.setAttribute('href', data.url);
+            displayGithub.setAttribute('href', data.github);
+          }
         })
-      });
+        display.style.display = 'block';
+      })
 
       // 디스플레이 닫기
       const displayClose = document.querySelector('.close');
@@ -53,25 +77,29 @@ async function changeData() {
         });
       }
 
-      function makeList(thumb, title, type, tech) {
-        list += `
-          <li>
-            <figure>
-              <img src="${thumb}" alt="thumbnail" />
-            </figure>
-            <figcaption>
-              <h3>
-                ${title}
-                <span class="workType">
-                  ${type}
-                </span>
-              </h3>
-              <p class="tech">
-                ${tech.join('')}
-              </p>
-            </figcaption>
-          </li>
-        `;
+      function makeList() {
+        list = ''
+        newData.map(data => {
+          list += `
+            <li data-num="${data.id}">
+              <figure>
+                <img src="${data.thumb}" alt="thumbnail" />
+              </figure>
+              <figcaption>
+                <h3>
+                  ${data.title}
+                  <span class="workType">
+                    ${data.type}
+                  </span>
+                </h3>
+                <p class="tech">
+                  ${data.tech.join('')}
+                </p>
+              </figcaption>
+            </li>
+          `;
+        })
+        worksList.innerHTML = list;
       }
 
       function showList() {
@@ -79,52 +107,6 @@ async function changeData() {
           opacity: '1',
           transform: 'translateY(0)'
         })
-      }
-
-      // 선택 옵션
-      const select = document.getElementById('select')
-      select.onchange = () => {
-        switch(select.value) {
-          case 'all': 
-          newData = [...data.works]
-          list = ''
-          newData.forEach(work => {
-            makeList(work.thumb, work.title, work.type, work.tech)
-          });
-          worksList.innerHTML = list;
-          showList()
-          break
-          case 'mini-project': 
-          newData = [...data.works]
-          list = ''
-          newData.forEach(work => {
-            if(work.type === '개인 프로젝트'){
-              makeList(work.thumb, work.title, work.type, work.tech)
-            }
-          });
-          worksList.innerHTML = list;
-          showList()
-          break
-          case 'mini-game': 
-          newData = [...data.works]
-          list = ''
-          newData.forEach(work => {
-            if(work.type === '미니 게임'){
-              makeList(work.thumb, work.title, work.type, work.tech)
-            }
-          });
-          worksList.innerHTML = list;
-          showList()
-          break
-          default: 
-          newData = [...data.works]
-          list = ''
-          newData.forEach(work => {
-            makeList(work.thumb, work.title, work.type, work.tech)
-          });
-          worksList.innerHTML = list;
-          showList()
-        }
       }
     }
   )
