@@ -474,6 +474,10 @@ table {
     width: 60%;
     font-size: 1rem;
   }
+  .select-box select {
+    padding: 5px;
+    font-size: 0.9rem;
+  }
   .worksListWrap {
     width: 70vw;
   }
@@ -587,8 +591,17 @@ table {
     width: 60%;
     font-size: 0.8em;
   }
+  .select-box {
+    width: 80vw;
+    margin: 3em auto 0;
+  }
+  .select-box select {
+    padding: 5px;
+    font-size: 0.7rem;
+  }
   .worksListWrap {
     width: 80vw;
+    margin: 1em auto 5em;
   }
   .worksListWrap li {
     width: 100%;
