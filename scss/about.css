@@ -813,7 +813,7 @@ table {
 
 .introduction .category {
   position: absolute;
-  right: 0;
+  right: 5%;
   top: 0;
   width: 100%;
   height: 100%;
@@ -824,34 +824,57 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   overflow: hidden;
 }
 
 .introduction .category p {
-  width: 100%;
-  font-size: 2rem;
+  margin: 0.5rem 0;
+  display: inline-block;
+  position: relative;
+  padding: 15px 20px;
+  font-size: 1.5rem;
   color: #fff;
   font-family: "Nanum Gothic", sans-serif;
   font-weight: 700;
   text-align: right;
-  -webkit-transform: translateX(5%);
-          transform: translateX(5%);
   -webkit-transition: .7s;
   transition: .7s;
   opacity: .3;
   cursor: pointer;
 }
 
+.introduction .category p::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: salmon;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 .introduction .category p.active {
   -webkit-transform: translateX(-5%);
           transform: translateX(-5%);
   opacity: 1;
+}
+
+.introduction .category p.active::before {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .introduction .category p:hover {
@@ -926,11 +949,11 @@ table {
     font-size: 2rem;
   }
   .introduction .category {
-    top: 15rem;
-    height: 30%;
+    top: 12rem;
   }
   .introduction .category p {
-    font-size: 1.5rem;
+    padding: 10px 15px;
+    font-size: 1.2rem;
   }
   .introduction .text {
     width: 60%;
@@ -968,6 +991,9 @@ table {
   .profile .profileName .scrollDown {
     margin: 3rem auto;
   }
+  .skillsWrap {
+    margin: 3rem auto;
+  }
   .skillsWrap .skillContainer {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -993,11 +1019,12 @@ table {
     font-size: 1.5rem;
   }
   .introduction .category {
-    top: 9rem;
-    height: 30%;
+    top: 10rem;
   }
   .introduction .category p {
-    font-size: 1rem;
+    margin: 0.2rem 0;
+    padding: 10px 15px;
+    font-size: 0.9rem;
   }
   .introduction .text {
     width: 60%;
@@ -1014,6 +1041,9 @@ table {
     left: -3em;
     top: 25%;
     font-size: 0.9em;
+  }
+  .profile {
+    margin: 15rem auto 0;
   }
   .profile .profileImg {
     width: 10rem;
@@ -1053,21 +1083,22 @@ table {
   }
   .introduction {
     height: 40rem;
-    margin: 10rem auto 5rem;
+    margin: 10rem auto 0;
   }
   .introduction .title span {
     font-size: 1.2rem;
   }
   .introduction .category {
     top: 9rem;
-    height: 25%;
   }
   .introduction .category p {
-    font-size: 1rem;
+    margin: 0.1rem 0;
+    padding: 7px 10px;
+    font-size: 0.8rem;
   }
   .introduction .text {
     width: 60%;
-    top: 23rem;
+    top: 20rem;
   }
   .introduction .text p {
     font-size: 0.7rem;
