@@ -78,15 +78,42 @@ table {
   text-align: center;
   color: #fff;
   font-family: "Nanum Gothic", sans-serif;
-  font-size: 1.1em;
+  font-size: 1.1rem;
   margin: 15em auto 5em;
   line-height: 2;
   text-shadow: 5px 5px 5px rgba(129, 129, 129, 0.3);
 }
 
+.select-box {
+  width: 60vw;
+  margin: 5em auto 0;
+  text-align: right;
+}
+
+.select-box select {
+  padding: 10px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  outline: none;
+  -webkit-transition: .4s;
+  transition: .4s;
+  cursor: pointer;
+}
+
+.select-box select:hover {
+  background-color: salmon;
+}
+
+.select-box select option {
+  background-color: salmon;
+}
+
 .worksListWrap {
   width: 60vw;
-  margin: 5em auto 10em;
+  margin: 3em auto 10em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

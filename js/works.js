@@ -7,24 +7,7 @@ async function changeData() {
   .then(
     data => {
       data.works.reverse().forEach(work => {
-        list += `
-          <li>
-            <figure>
-              <img src="${work.thumb}" alt="thumbnail" />
-            </figure>
-            <figcaption>
-              <h3>
-                ${work.title}
-                <span class="workType">
-                  ${work.type}
-                </span>
-              </h3>
-              <p class="tech">
-                ${work.tech.join('')}
-              </p>
-            </figcaption>
-          </li>
-        `;
+        makeList(work.thumb, work.title, work.type, work.tech)
       });
       worksList.innerHTML = list;
 
@@ -66,6 +49,82 @@ async function changeData() {
             work.classList.add('active');
           }
         });
+      }
+
+      function makeList(thumb, title, type, tech) {
+        list += `
+          <li>
+            <figure>
+              <img src="${thumb}" alt="thumbnail" />
+            </figure>
+            <figcaption>
+              <h3>
+                ${title}
+                <span class="workType">
+                  ${type}
+                </span>
+              </h3>
+              <p class="tech">
+                ${tech.join('')}
+              </p>
+            </figcaption>
+          </li>
+        `;
+      }
+
+      function showList() {
+        $('.worksListWrap li').css({
+          opacity: '1',
+          transform: 'translateY(0)'
+        })
+      }
+
+      let newData = []
+
+      // 선택 옵션
+      const select = document.getElementById('select')
+      select.onchange = () => {
+        switch(select.value) {
+          case 'all': 
+          newData = [...data.works]
+          list = ''
+          newData.forEach(work => {
+            makeList(work.thumb, work.title, work.type, work.tech)
+          });
+          worksList.innerHTML = list;
+          showList()
+          break
+          case 'mini-project': 
+          newData = [...data.works]
+          list = ''
+          newData.forEach(work => {
+            if(work.type === '개인 프로젝트'){
+              makeList(work.thumb, work.title, work.type, work.tech)
+            }
+          });
+          worksList.innerHTML = list;
+          showList()
+          break
+          case 'mini-game': 
+          newData = [...data.works]
+          list = ''
+          newData.forEach(work => {
+            if(work.type === '미니 게임'){
+              makeList(work.thumb, work.title, work.type, work.tech)
+            }
+          });
+          worksList.innerHTML = list;
+          showList()
+          break
+          default: 
+          newData = [...data.works]
+          list = ''
+          data.works.forEach(work => {
+            makeList(work.thumb, work.title, work.type, work.tech)
+          });
+          worksList.innerHTML = list;
+          showList()
+        }
       }
     }
   )
