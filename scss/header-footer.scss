@@ -40,8 +40,10 @@
   position: fixed;
   left: 0; top: 0;
   z-index: 10;
+  pointer-events: none;
   h1{
     text-align: center;
+    pointer-events: fill;
     animation: parrot 7s infinite ease-in-out;
     cursor: pointer;
     &:hover{
@@ -55,6 +57,7 @@
     position: absolute;
     right: 10%; top: 3.8rem;
     opacity: 0;
+    pointer-events: fill;
     span{
       font-size: 1.2em;
       color: rgba(#fff, 0.5);
@@ -77,6 +80,7 @@
     width: 3em;
     position: absolute;
     right: 5%; top: 3rem;
+    pointer-events: fill;
     cursor: pointer;
     span{
       display: block;
@@ -122,6 +126,7 @@
   text-align: center;
   font-family: $menu;
   overflow: auto;
+  pointer-events: fill;
   .mainMenuTop{
     padding: 5vh 0 10vh;
     a{
@@ -167,6 +172,7 @@
   justify-content: center;
   align-items: center;
   opacity: 0;
+  pointer-events: fill;
   transition: 1s;
   a{
     display: block;

@@ -6,7 +6,9 @@ async function changeData() {
   .then((data) => data.json())
   .then(
     data => {
-      data.works.reverse().forEach(work => {
+      let newData = [...data.works.reverse()]
+
+      newData.forEach(work => {
         makeList(work.thumb, work.title, work.type, work.tech)
       });
       worksList.innerHTML = list;
@@ -79,8 +81,6 @@ async function changeData() {
         })
       }
 
-      let newData = []
-
       // 선택 옵션
       const select = document.getElementById('select')
       select.onchange = () => {
@@ -119,7 +119,7 @@ async function changeData() {
           default: 
           newData = [...data.works]
           list = ''
-          data.works.forEach(work => {
+          newData.forEach(work => {
             makeList(work.thumb, work.title, work.type, work.tech)
           });
           worksList.innerHTML = list;

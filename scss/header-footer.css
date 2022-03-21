@@ -209,10 +209,12 @@ table {
   left: 0;
   top: 0;
   z-index: 10;
+  pointer-events: none;
 }
 
 .header h1 {
   text-align: center;
+  pointer-events: fill;
   -webkit-animation: parrot 7s infinite ease-in-out;
           animation: parrot 7s infinite ease-in-out;
   cursor: pointer;
@@ -232,6 +234,7 @@ table {
   right: 10%;
   top: 3.8rem;
   opacity: 0;
+  pointer-events: fill;
 }
 
 .header .language span {
@@ -260,6 +263,7 @@ table {
   position: absolute;
   right: 5%;
   top: 3rem;
+  pointer-events: fill;
   cursor: pointer;
 }
 
@@ -328,6 +332,7 @@ table {
   text-align: center;
   font-family: "Barriecito", cursive;
   overflow: auto;
+  pointer-events: fill;
 }
 
 .mainMenu .mainMenuTop {
@@ -387,6 +392,7 @@ table {
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
+  pointer-events: fill;
   -webkit-transition: 1s;
   transition: 1s;
 }

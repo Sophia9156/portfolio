@@ -68,6 +68,19 @@
   .sq2{animation-delay: 3s;}
   .sq3{animation-delay: 4.5s;}
   .sq4{animation-delay: 6s;}
+  .skip{
+    position: absolute;
+    right: 5%;
+    bottom: 3rem;
+    padding: 15px 20px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-family: $nanum;
+    pointer-events: fill;
+    cursor: pointer;
+  }
 }
 
 
@@ -97,6 +110,9 @@
   .box{
     .text{
       font-size: 1em;
+    }
+    .skip{
+      font-size: 0.8rem;
     }
   }
 }

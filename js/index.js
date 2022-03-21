@@ -90,3 +90,22 @@ $('.textWrap h2').on('click', () => {
     });
   },4200)
 })
+
+
+// navigation 이동
+$('.index-about').on('click', function() {
+  $('.loading').css({
+    display: 'block'
+  });
+  setTimeout(() => {
+    location.href = './about.html'
+  },1500)
+})
+$('.index-works').on('click', function() {
+  $('.loading').css({
+    display: 'block'
+  });
+  setTimeout(() => {
+    location.href = './works.html'
+  },1500)
+})

@@ -35,6 +35,30 @@ table {
   font-family: 'Material Icons';
 }
 
+@-webkit-keyframes arrowBlink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes arrowBlink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .animationTextWrap {
   width: 100%;
   height: 90vh;
@@ -85,14 +109,11 @@ table {
 
 .textWrap {
   width: 100%;
-  height: 85vh;
+  height: 75vh;
+  margin-top: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -101,11 +122,76 @@ table {
           align-items: center;
 }
 
+.textWrap .link {
+  margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.textWrap .link a {
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 15px 20px;
+  color: #fff;
+  font-family: "Barriecito", cursive;
+  -webkit-transition: .4s;
+  transition: .4s;
+  z-index: 10;
+}
+
+.textWrap .link a:hover {
+  color: #c300ff;
+  -webkit-transform: scale(1.2) rotate(10deg);
+          transform: scale(1.2) rotate(10deg);
+}
+
+.textWrap .link .arrow {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.textWrap .link .arrow span {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  -webkit-animation: arrowBlink 1s infinite linear;
+          animation: arrowBlink 1s infinite linear;
+}
+
+.textWrap .link .arrow span:last-child {
+  -webkit-transform: translate(10px, 10px);
+          transform: translate(10px, 10px);
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+}
+
+.textWrap .link .arrow.arrow-left {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.textWrap .link .arrow.arrow-right {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
 .textWrap h2 {
   padding: 0 0.5em;
   color: #fff;
-  font-size: 8em;
-  margin-top: 1em;
+  font-size: 7rem;
   font-weight: 700;
   position: relative;
   cursor: pointer;
@@ -206,6 +292,30 @@ table {
   .animationTextWrap p {
     font-size: 5em;
   }
+  .textWrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .textWrap .link {
+    margin: 30px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .textWrap .link a {
+    font-size: 2rem;
+  }
+  .textWrap .link .arrow.arrow-left {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .textWrap .link .arrow.arrow-right {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+  }
   .textWrap h2 {
     color: salmon;
     font-size: 5em;
@@ -226,6 +336,38 @@ table {
 @media all and (min-width: 480px) and (max-width: 767px) {
   .animationTextWrap p {
     font-size: 4em;
+  }
+  .textWrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .textWrap .link {
+    margin: 30px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .textWrap .link a {
+    font-size: 1.5rem;
+  }
+  .textWrap .link .arrow {
+    width: 15px;
+    height: 15px;
+  }
+  .textWrap .link .arrow span:last-child {
+    -webkit-transform: translate(5px, 5px);
+            transform: translate(5px, 5px);
+  }
+  .textWrap .link .arrow.arrow-left {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .textWrap .link .arrow.arrow-right {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
   }
   .textWrap h2 {
     color: salmon;
@@ -255,6 +397,38 @@ table {
 @media all and (max-width: 479px) {
   .animationTextWrap p {
     font-size: 3em;
+  }
+  .textWrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .textWrap .link {
+    margin: 30px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .textWrap .link a {
+    font-size: 1.5rem;
+  }
+  .textWrap .link .arrow {
+    width: 15px;
+    height: 15px;
+  }
+  .textWrap .link .arrow span:last-child {
+    -webkit-transform: translate(5px, 5px);
+            transform: translate(5px, 5px);
+  }
+  .textWrap .link .arrow.arrow-left {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .textWrap .link .arrow.arrow-right {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
   }
   .textWrap h2 {
     color: salmon;

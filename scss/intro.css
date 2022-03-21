@@ -229,6 +229,20 @@ table {
           animation-delay: 6s;
 }
 
+.box .skip {
+  position: absolute;
+  right: 5%;
+  bottom: 3rem;
+  padding: 15px 20px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Nanum Gothic", sans-serif;
+  pointer-events: fill;
+  cursor: pointer;
+}
+
 /* 테블릿 세로 (해상도 768px ~ 1023px)*/
 @media all and (min-width: 768px) and (max-width: 1023px) {
   .box .text {
@@ -247,6 +261,9 @@ table {
 @media all and (max-width: 479px) {
   .box .text {
     font-size: 1em;
+  }
+  .box .skip {
+    font-size: 0.8rem;
   }
 }
 /*# sourceMappingURL=intro.css.map */
