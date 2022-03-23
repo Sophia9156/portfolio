@@ -59,6 +59,24 @@ table {
   }
 }
 
+@-webkit-keyframes linkMove {
+  0% {
+    color: #fff;
+  }
+  100% {
+    color: #c300ff;
+  }
+}
+
+@keyframes linkMove {
+  0% {
+    color: #fff;
+  }
+  100% {
+    color: #c300ff;
+  }
+}
+
 .animationTextWrap {
   width: 100%;
   height: 90vh;
@@ -107,6 +125,15 @@ table {
   color: #fd1d1d;
 }
 
+.textWrap.active h2 {
+  height: 30rem;
+}
+
+.textWrap.active h2 span {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .textWrap {
   width: 100%;
   height: 75vh;
@@ -122,79 +149,58 @@ table {
           align-items: center;
 }
 
-.textWrap .link {
-  margin: 0 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.textWrap .link a {
-  font-size: 3rem;
-  font-weight: 700;
-  padding: 15px 20px;
-  color: #fff;
-  font-family: "Barriecito", cursive;
-  -webkit-transition: .4s;
-  transition: .4s;
-  z-index: 8;
-}
-
-.textWrap .link a:hover {
-  color: #c300ff;
-  -webkit-transform: scale(1.2) rotate(10deg);
-          transform: scale(1.2) rotate(10deg);
-}
-
-.textWrap .link .arrow {
-  width: 20px;
-  height: 20px;
-  position: relative;
-}
-
-.textWrap .link .arrow span {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-top: 2px solid #fff;
-  border-left: 2px solid #fff;
-  -webkit-animation: arrowBlink 1s infinite linear;
-          animation: arrowBlink 1s infinite linear;
-}
-
-.textWrap .link .arrow span:last-child {
-  -webkit-transform: translate(10px, 10px);
-          transform: translate(10px, 10px);
-  -webkit-animation-delay: .1s;
-          animation-delay: .1s;
-}
-
-.textWrap .link .arrow.arrow-left {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.textWrap .link .arrow.arrow-right {
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-}
-
 .textWrap h2 {
   padding: 0 0.5em;
+  height: 10rem;
+  overflow: hidden;
   color: #fff;
   font-size: 7rem;
   font-weight: 700;
   position: relative;
+  text-align: center;
+  -webkit-transition: .5s;
+  transition: .5s;
   cursor: pointer;
+}
+
+.textWrap h2 span {
+  display: block;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.textWrap h2 span b {
+  font-size: 5rem;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+  -webkit-animation: linkMove 1s infinite linear;
+          animation: linkMove 1s infinite linear;
+}
+
+.textWrap h2 span b:nth-child(2) {
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+}
+
+.textWrap h2 span b:nth-child(3) {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+.textWrap h2 span b:nth-child(4) {
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+.textWrap h2 span b:nth-child(5) {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.textWrap h2 span b:hover {
+  font-style: italic;
 }
 
 .textWrap h2 .textBg {
@@ -290,44 +296,35 @@ table {
 /* 테블릿 세로 (해상도 768px ~ 1023px)*/
 @media all and (min-width: 768px) and (max-width: 1023px) {
   .animationTextWrap p {
-    font-size: 5em;
+    font-size: 5rem;
   }
-  .textWrap {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .textWrap.active h2 {
+    height: 21rem;
+    color: #fff;
   }
-  .textWrap .link {
-    margin: 30px 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .textWrap.active h2 span {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
-  .textWrap .link a {
-    font-size: 2rem;
-  }
-  .textWrap .link .arrow.arrow-left {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  .textWrap .link .arrow.arrow-right {
-    -webkit-transform: rotate(225deg);
-            transform: rotate(225deg);
+  .textWrap.active h2 .textBg {
+    background-color: transparent;
   }
   .textWrap h2 {
+    height: 7rem;
     color: salmon;
-    font-size: 5em;
+    font-size: 5rem;
+  }
+  .textWrap h2 span b {
+    font-size: 4rem;
   }
   .clockWrap {
-    padding: 1.5em 0;
+    padding: 1.5rem 0;
   }
   .clockWrap .calendar .day1 {
-    font-size: 1em;
+    font-size: 1rem;
   }
   .title {
-    left: -1em;
+    left: -1rem;
     top: 45%;
   }
 }
@@ -335,43 +332,26 @@ table {
 /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
 @media all and (min-width: 480px) and (max-width: 767px) {
   .animationTextWrap p {
-    font-size: 4em;
+    font-size: 4rem;
   }
-  .textWrap {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .textWrap.active h2 {
+    height: 15rem;
+    color: #fff;
   }
-  .textWrap .link {
-    margin: 30px 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .textWrap.active h2 span {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
-  .textWrap .link a {
-    font-size: 1.5rem;
-  }
-  .textWrap .link .arrow {
-    width: 15px;
-    height: 15px;
-  }
-  .textWrap .link .arrow span:last-child {
-    -webkit-transform: translate(5px, 5px);
-            transform: translate(5px, 5px);
-  }
-  .textWrap .link .arrow.arrow-left {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  .textWrap .link .arrow.arrow-right {
-    -webkit-transform: rotate(225deg);
-            transform: rotate(225deg);
+  .textWrap.active h2 .textBg {
+    background-color: transparent;
   }
   .textWrap h2 {
+    height: 5rem;
     color: salmon;
-    font-size: 3.5em;
+    font-size: 3.5rem;
+  }
+  .textWrap h2 span b {
+    font-size: 3rem;
   }
   .clockWrap {
     padding: 1.5em 0;
@@ -398,41 +378,27 @@ table {
   .animationTextWrap p {
     font-size: 3em;
   }
-  .textWrap {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .textWrap.active h2 {
+    height: 12rem;
+    color: #fff;
   }
-  .textWrap .link {
-    margin: 30px 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .textWrap.active h2 span {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
-  .textWrap .link a {
-    font-size: 1.5rem;
-  }
-  .textWrap .link .arrow {
-    width: 15px;
-    height: 15px;
-  }
-  .textWrap .link .arrow span:last-child {
-    -webkit-transform: translate(5px, 5px);
-            transform: translate(5px, 5px);
-  }
-  .textWrap .link .arrow.arrow-left {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  .textWrap .link .arrow.arrow-right {
-    -webkit-transform: rotate(225deg);
-            transform: rotate(225deg);
+  .textWrap.active h2 .textBg {
+    background-color: transparent;
   }
   .textWrap h2 {
+    height: 4rem;
     color: salmon;
-    font-size: 3em;
+    font-size: 3rem;
+  }
+  .textWrap h2 span b {
+    font-size: 2.5rem;
+  }
+  .textWrap h2 .textBg .textBox {
+    display: none;
   }
   .clockWrap {
     padding: 1.5em 0;

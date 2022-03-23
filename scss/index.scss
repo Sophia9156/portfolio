@@ -7,6 +7,11 @@
   100%{opacity: 1;}
 }
 
+@keyframes linkMove {
+  0%{color: #fff;}
+  100%{color: $purple;}
+}
+
 .animationTextWrap{
   width: 100%;
   height: 90vh;
@@ -36,6 +41,15 @@
     color: $red;
   }
 }
+
+.textWrap.active{
+  h2{
+    height: 30rem;
+    span{
+      transform: translateY(0);
+    }
+  }
+}
 .textWrap{
   width: 100%;
   height: 75vh;
@@ -43,58 +57,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .link{
-    margin: 0 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    a{
-      font-size: 3rem;
-      font-weight: 700;
-      padding: 15px 20px;
-      color: #fff;
-      font-family: $menu;
-      transition: .4s;
-      z-index: 8;
-      &:hover{
-        color: $purple;
-        transform: scale(1.2) rotate(10deg);
-      }
-    }
-    .arrow{
-      width: 20px;
-      height: 20px;
-      position: relative;
-      span{
-        display: block;
-        position: absolute;
-        left: 0; top: 0;
-        width: 100%;
-        height: 100%;
-        border-top: 2px solid #fff;
-        border-left: 2px solid #fff;
-        animation: arrowBlink 1s infinite linear;
-        &:last-child{
-          transform: translate(10px, 10px);
-          animation-delay: .1s;
-        }
-      }
-      &.arrow-left{
-        transform: rotate(-45deg);
-      }
-      &.arrow-right{
-        transform: rotate(135deg);
-        
-      }
-    }
-  }
   h2{
     padding: 0 0.5em;
+    height: 10rem;
+    overflow: hidden;
     color: #fff;
     font-size: 7rem;
     font-weight: 700;
     position: relative;
+    text-align: center;
+    transition: .5s;
     cursor: pointer;
+    span{
+      display: block;
+      transform: translateY(-100%);
+      transition: .5s;
+      b{
+        font-size: 5rem;
+        text-decoration: solid;
+        animation: linkMove 1s infinite linear;
+        &:nth-child(2){animation-delay: .1s;}
+        &:nth-child(3){animation-delay: .2s;}
+        &:nth-child(4){animation-delay: .3s;}
+        &:nth-child(5){animation-delay: .4s;}
+        &:hover{
+          font-style: italic;
+        }
+      }
+    }
     .textBg{
       width: 100%;
       height: 100%;
@@ -177,44 +167,45 @@
 @media all and (min-width:768px) and (max-width:1023px) {
 .animationTextWrap{
   p{
-    font-size: 5em;
+    font-size: 5rem;
+  }
+}
+.textWrap.active{
+  h2{
+    height: 21rem;
+    color: #fff;
+    span{
+      transform: translateY(0);
+    }
+    .textBg{
+      background-color: transparent;
+    }
   }
 }
 .textWrap{
-  flex-direction: column;
-  .link{
-    margin: 30px 0;
-    flex-direction: column;
-    a{
-      font-size: 2rem;
-    }
-    .arrow{
-      &.arrow-left{
-        transform: rotate(45deg);
-      }
-      &.arrow-right{
-        transform: rotate(225deg);
-        
-      }
-    }
-  }
   h2{
+    height: 7rem;
     color: salmon;
-    font-size: 5em;
+    font-size: 5rem;
+    span{
+      b{
+        font-size: 4rem;
+      }
+    }
   }
 }
 
 .clockWrap{
-  padding: 1.5em 0;
+  padding: 1.5rem 0;
   .calendar{
     .day1{
-      font-size: 1em;
+      font-size: 1rem;
     }
   }
 }
 
 .title{
-  left: -1em; top: 45%;
+  left: -1rem; top: 45%;
 }
 }
 
@@ -223,36 +214,31 @@
 @media all and (min-width:480px) and (max-width:767px) {
 .animationTextWrap{
   p{
-    font-size: 4em;
+    font-size: 4rem;
+  }
+}
+.textWrap.active{
+  h2{
+    height: 15rem;
+    color: #fff;
+    span{
+      transform: translateY(0);
+    }
+    .textBg{
+      background-color: transparent;
+    }
   }
 }
 .textWrap{
-  flex-direction: column;
-  .link{
-    margin: 30px 0;
-    flex-direction: column;
-    a{
-      font-size: 1.5rem;
-    }
-    .arrow{
-      width: 15px;
-      height: 15px;
-      span{
-        &:last-child{
-          transform: translate(5px, 5px);
-        }
-      }
-      &.arrow-left{
-        transform: rotate(45deg);
-      }
-      &.arrow-right{
-        transform: rotate(225deg);
-      }
-    }
-  }
   h2{
+    height: 5rem;
     color: salmon;
-    font-size: 3.5em;
+    font-size: 3.5rem;
+    span{
+      b{
+        font-size: 3rem;
+      }
+    }
   }
 }
 
@@ -286,33 +272,34 @@
     font-size: 3em;
   }
 }
-.textWrap{
-  flex-direction: column;
-  .link{
-    margin: 30px 0;
-    flex-direction: column;
-    a{
-      font-size: 1.5rem;
+
+.textWrap.active{
+  h2{
+    height: 12rem;
+    color: #fff;
+    span{
+      transform: translateY(0);
     }
-    .arrow{
-      width: 15px;
-      height: 15px;
-      span{
-        &:last-child{
-          transform: translate(5px, 5px);
-        }
-      }
-      &.arrow-left{
-        transform: rotate(45deg);
-      }
-      &.arrow-right{
-        transform: rotate(225deg);
-      }
+    .textBg{
+      background-color: transparent;
     }
   }
+}
+.textWrap{
   h2{
+    height: 4rem;
     color: salmon;
-    font-size: 3em;
+    font-size: 3rem;
+    span{
+      b{
+        font-size: 2.5rem;
+      }
+    }
+    .textBg{
+      .textBox{
+        display: none;
+      }
+    }
   }
 }
 

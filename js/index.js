@@ -54,46 +54,56 @@ window.addEventListener('mousemove', function(e) {
   }
 });
 
-$('.textWrap h2').on('click', () => {
-  $('.animationEn').css({
-    transform: 'translateX(200%)'
-  });
-  $('.animationKo').css({
-    transform: 'translateX(-200%)'
-  });
-  $('.animationJp').css({
-    transform: 'translateX(200%)'
-  });
-  setTimeout(() => {
+let isLinkOpen = false
+
+$('.clickLink').on('click', () => {
+  if(!isLinkOpen) {
+    isLinkOpen = true
+    $('.textWrap').addClass('active')
     $('.animationEn').css({
-      transform: 'translateX(-200%)',
-      transition: '0s'
+      transform: 'translateX(200%)'
     });
     $('.animationKo').css({
-      transform: 'translateX(200%)',
-      transition: '0s'
+      transform: 'translateX(-200%)'
     });
     $('.animationJp').css({
-      transform: 'translateX(-200%)',
-      transition: '0s'
+      transform: 'translateX(200%)'
     });
-  }, 4100)
-  setTimeout(() => {
-    $('.animationEn').css({
-      transition: '4s'
-    });
-    $('.animationKo').css({
-      transition: '4s'
-    });
-    $('.animationJp').css({
-      transition: '4s'
-    });
-  },4200)
+    setTimeout(() => {
+      $('.animationEn').css({
+        transform: 'translateX(-200%)',
+        transition: '0s'
+      });
+      $('.animationKo').css({
+        transform: 'translateX(200%)',
+        transition: '0s'
+      });
+      $('.animationJp').css({
+        transform: 'translateX(-200%)',
+        transition: '0s'
+      });
+    }, 4100)
+    setTimeout(() => {
+      $('.animationEn').css({
+        transition: '4s'
+      });
+      $('.animationKo').css({
+        transition: '4s'
+      });
+      $('.animationJp').css({
+        transition: '4s'
+      });
+    },4200)
+  } else {
+    isLinkOpen = false
+    $('.textWrap').removeClass('active')
+  }
+  
 })
 
 
 // navigation 이동
-$('.index-about').on('click', function() {
+$('.aboutLink').on('click', function() {
   $('.loading').css({
     display: 'block'
   });
@@ -101,7 +111,7 @@ $('.index-about').on('click', function() {
     location.href = './about.html'
   },1500)
 })
-$('.index-works').on('click', function() {
+$('.worksLink').on('click', function() {
   $('.loading').css({
     display: 'block'
   });
