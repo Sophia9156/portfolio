@@ -40,7 +40,6 @@ async function changeData() {
       const display = document.querySelector('.displayWrap');
       const displayThumb = document.querySelector('.displayThumb');
       const displayTitle = document.querySelector('.display h4');
-      const displayPeriod = document.querySelector('.displayPeriod dd');
       const displayTech = document.querySelector('.displayTech dd');
       const displayDescription = document.querySelector('.displayDescription dd');
       const displayPage = document.querySelector('.goToPage');
@@ -52,7 +51,6 @@ async function changeData() {
           if(data.id === e.currentTarget.dataset.num) {
             displayThumb.setAttribute('src', data.thumb);
             displayTitle.textContent = data.title;
-            displayPeriod.textContent = data.period;
             displayTech.innerHTML = data.tech.join('');
             displayDescription.textContent = data.description;
             displayPage.setAttribute('href', data.url);
